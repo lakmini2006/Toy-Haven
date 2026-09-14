@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Website title -->
+    <title>Toy Haven | Discover Your Favourite Toys</title>
+
+    <!-- Website description -->
+    <meta name="description"
+        content="Toy Haven - Explore collectible figurines, toys, board games and diecast cars.">
+
+    <!-- Connect our CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <!-- Website Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/toy-haven-logo.png" alt="Toy Haven">
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="nav-links" id="navLinks">
+
+                <a href="index.html" class="active">Home</a>
+
+                <a href="products.html">Products</a>
+
+                <a href="wishlist.html">Wishlist</a>
+
+                <a href="cart.html">
+                    Cart <span id="cart-count">0</span>
+                </a>
+
+                <a href="feedback.html">Support</a>
+
+            </div>
+
+            <!-- Hamburger Menu -->
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+                ☰
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main>
+
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
+
+        <section class="hero" id="hero">
+
+            <!-- Hero Slide 1 -->
+            <div class="hero-slide active-slide">
+
+                <div class="hero-content">
+
+                    <p class="hero-small-title">
+                        WELCOME TO TOY HAVEN
+                    </p>
+
+                    <h1>
+                        Discover Your Next
+                        <span>Favourite Toy</span>
+                    </h1>
+
+                    <p>
+                        Explore our exciting collection of toys,
+                        collectible figurines, board games and diecast cars.
+                    </p>
+
+                    <a href="products.html" class="btn btn-primary">
+                        Shop Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Slide 2 -->
+            <div class="hero-slide">
+
+                <div class="hero-content">
+
+                    <p class="hero-small-title">
+                        COLLECT • PLAY • ENJOY
+                    </p>
+
+                    <h1>
+                        Bring Your
+                        <span>Collection</span> to Life
+                    </h1>
+
+                    <p>
+                        Find unique collectible figurines
+                        made for passionate collectors.
+                    </p>
+
+                    <a href="products.html" class="btn btn-primary">
+                        Explore Figurines
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Slide 3 -->
+            <div class="hero-slide">
+
+                <div class="hero-content">
+
+                    <p class="hero-small-title">
+                        GAME NIGHT IS HERE
+                    </p>
+
+                    <h1>
+                        Play More,
+                        <span>Smile More</span>
+                    </h1>
+
+                    <p>
+                        Discover exciting board games
+                        for friends and family.
+                    </p>
+
+                    <a href="products.html" class="btn btn-primary">
+                        Explore Games
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Slide 4 -->
+            <div class="hero-slide">
+
+                <div class="hero-content">
+
+                    <p class="hero-small-title">
+                        FOR CAR LOVERS
+                    </p>
+
+                    <h1>
+                        Discover
+                        <span>Diecast Classics</span>
+                    </h1>
+
+                    <p>
+                        Add beautifully detailed miniature
+                        cars to your collection.
+                    </p>
+
+                    <a href="products.html" class="btn btn-primary">
+                        View Diecast Cars
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Slider Controls -->
+            <button class="hero-control hero-prev" id="hero-prev"
+                aria-label="Previous slide">
+                ❮
+            </button>
+
+            <button class="hero-control hero-next" id="hero-next"
+                aria-label="Next slide">
+                ❯
+            </button>
+
+
+            <!-- Slider Indicators -->
+            <div class="hero-dots">
+
+                <button class="hero-dot active-dot"
+                    aria-label="Slide 1"></button>
+
+                <button class="hero-dot"
+                    aria-label="Slide 2"></button>
+
+                <button class="hero-dot"
+                    aria-label="Slide 3"></button>
+
+                <button class="hero-dot"
+                    aria-label="Slide 4"></button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURED PRODUCTS
+        ========================== -->
+
+        <section class="featured-section">
+
+            <div class="section-heading">
+
+                <p class="section-subtitle">
+                    HANDPICKED FOR YOU
+                </p>
+
+                <h2>
+                    Featured Products
+                </h2>
+
+                <p>
+                    Check out some of our favourite products
+                    from the Toy Haven collection.
+                </p>
+
+            </div>
+
+
+            <div class="featured-products">
+
+                <!-- Product 1 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+                        <img src="images/superhero.png" alt="Super Hero Figure">
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Figurines
+                        </span>
+
+                        <h3>
+                            Super Hero Figure
+                        </h3>
+
+                        <p class="product-price">
+                            Rs. 4,500
+                        </p>
+
+                        <a href="products.html" class="btn btn-secondary">
+                            Shop Now
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Product 2 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+                        <img src="images/mustang.png" alt="Classic Mustang">
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Diecast Cars
+                        </span>
+
+                        <h3>
+                            Classic Mustang
+                        </h3>
+
+                        <p class="product-price">
+                            Rs. 6,800
+                        </p>
+
+                        <a href="products.html" class="btn btn-secondary">
+                            Shop Now
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Product 3 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+                        <img src="images/chess.png" alt="Classic Chess Set">
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Board Games
+                        </span>
+
+                        <h3>
+                            Classic Chess Set
+                        </h3>
+
+                        <p class="product-price">
+                            Rs. 5,500
+                        </p>
+
+                        <a href="products.html" class="btn btn-secondary">
+                            Shop Now
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PRODUCT OF THE DAY
+        ========================== -->
+
+        <section class="product-of-day">
+
+            <div class="product-day-content">
+
+                <p class="section-subtitle">
+                    TODAY'S SPECIAL
+                </p>
+
+                <h2>
+                    <img src="images/star-icon.png" alt="">
+                        Product of the Day
+                    <img src="images/star-icon.png" alt="">
+                </h2>
+
+                <p id="featured-product-description">
+                    Discover today's specially selected
+                    Toy Haven product.
+                </p>
+
+                <a href="products.html" class="btn btn-primary">
+                    View Product
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             WHY TOY HAVEN
+        ========================== -->
+
+        <section class="why-section">
+
+            <div class="section-heading">
+
+                <p class="section-subtitle">
+                    WHY TOY HAVEN?
+                </p>
+
+                <h2>
+                    Made for Toy Lovers
+                </h2>
+
+            </div>
+
+
+            <div class="why-grid">
+
+                <article class="why-card">
+
+                    <div class="why-icon">
+                        <img src="images/why-icon-collection.png" alt="Toy collection">
+                    </div>
+
+                    <h3>
+                        Wide Collection
+                    </h3>
+
+                    <p>
+                        Discover figurines, toys,
+                        board games and diecast cars
+                        in one place.
+                    </p>
+
+                </article>
+
+
+                <article class="why-card">
+
+                    <div class="why-icon">
+                         <img src="images/why-icon-heart.png" alt="Build your collection">
+                    </div>
+
+                    <h3>
+                        Build Your Collection
+                    </h3>
+
+                    <p>
+                        Save your favourite products
+                        and keep track of your collection.
+                    </p>
+
+                </article>
+
+
+                <article class="why-card">
+
+                    <div class="why-icon">
+                        <img src="images/why-icon-shopping.png" alt="Easy shopping">
+                    </div>
+
+                    <h3>
+                        Easy Shopping
+                    </h3>
+
+                    <p>
+                        Browse, search and add products
+                        to your cart with ease.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NEWSLETTER
+        ========================== -->
+
+        <section class="newsletter">
+
+            <div class="newsletter-content">
+
+                <p class="section-subtitle">
+                    STAY IN THE LOOP
+                </p>
+
+                <h2>
+                    Join the Toy Haven Family
+                </h2>
+
+                <p>
+                    Subscribe to our newsletter to hear
+                    about new arrivals and special offers.
+                </p>
+
+
+                <form id="newsletter-form" class="newsletter-form">
+
+                    <label for="newsletter-email" class="sr-only">
+                        Email address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="newsletter-email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                    <button type="submit" class="btn btn-primary">
+                        Subscribe
+                    </button>
+
+                </form>
+
+                <p id="newsletter-message" class="form-message"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Footer About -->
+            <div class="footer-column">
+
+                <h3>
+                    <img src="images/toy-haven-logo.png" alt="Toy Haven">
+                </h3>
+
+                <p>
+                    Your interactive destination for
+                    toys, games and collectibles.
+                </p>
+
+            </div>
+
+
+            <!-- Footer Navigation -->
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="products.html">Products</a>
+
+                <a href="wishlist.html">Wishlist</a>
+
+                <a href="cart.html">Cart</a>
+
+            </div>
+
+
+            <!-- Footer Support -->
+            <div class="footer-column">
+
+                <h3>
+                    Support
+                </h3>
+
+                <a href="feedback.html">
+                    Feedback & Support
+                </a>
+
+                <a href="checkout.html">
+                    Checkout
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Toy Haven. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

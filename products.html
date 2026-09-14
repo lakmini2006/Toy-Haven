@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Toy Haven | Products</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <meta name="description"
+        content="Explore Toy Haven's collection of figurines, toys, board games and diecast cars.">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        type="image/svg+xml"
+        href="favicon.svg">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         HEADER
+    ================================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <!-- Logo -->
+
+            <a href="index.html"
+                class="logo">
+
+                <img src="images/toy-haven-logo.png" alt="Toy Haven">
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <div class="nav-links"
+                id="navLinks">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html"
+                    class="active">
+                    Products
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                    <span id="cart-count">0</span>
+                </a>
+
+                <a href="feedback.html">
+                    Support
+                </a>
+
+            </div>
+
+
+            <!-- Mobile menu button -->
+
+            <button
+                class="hamburger"
+                id="hamburger"
+                aria-label="Open navigation menu">
+
+                ☰
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =================================
+         MAIN CONTENT
+    ================================== -->
+
+    <main>
+
+
+        <!-- =================================
+             PAGE INTRODUCTION
+        ================================== -->
+
+        <section class="page-header">
+
+            <div class="section-heading">
+
+                <p class="section-subtitle">
+                    EXPLORE OUR COLLECTION
+                </p>
+
+                <h1>
+                    All Products
+                </h1>
+
+                <p>
+                    Discover toys, collectible figurines,
+                    board games and diecast cars.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             PRODUCT CONTROLS
+        ================================== -->
+
+        <section class="product-section">
+
+            <div class="product-controls">
+
+
+                <!-- Search -->
+
+                <div class="search-box">
+
+                    <label for="product-search">
+                        Search Products
+                    </label>
+
+                    <input
+                        type="search"
+                        id="product-search"
+                        placeholder="Search by product name..."
+                    >
+
+                </div>
+
+
+                <!-- Category Filter -->
+
+                <div class="category-filter">
+
+                    <p>
+                        Filter by Category
+                    </p>
+
+
+                    <div class="filter-buttons">
+
+                        <button
+                            class="filter-btn active-filter"
+                            data-category="All">
+
+                            All
+
+                        </button>
+
+
+                        <button
+                            class="filter-btn"
+                            data-category="Figurines">
+
+                            Figurines
+
+                        </button>
+
+
+                        <button
+                            class="filter-btn"
+                            data-category="Toys">
+
+                            Toys
+
+                        </button>
+
+
+                        <button
+                            class="filter-btn"
+                            data-category="Board Games">
+
+                            Board Games
+
+                        </button>
+
+
+                        <button
+                            class="filter-btn"
+                            data-category="Diecast Cars">
+
+                            Diecast Cars
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT GRID
+            ================================== -->
+
+            <div
+                class="product-grid"
+                id="product-grid">
+
+                <!-- JavaScript will insert products here -->
+
+            </div>
+
+
+            <!-- No Results Message -->
+
+            <div
+                class="no-results"
+                id="no-results">
+
+                <h2>
+                    No products found 😔
+                </h2>
+
+                <p>
+                    Try another search or category.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             PRODUCT MODAL
+        ================================== -->
+
+        <div
+            class="product-modal"
+            id="product-modal"
+            aria-hidden="true">
+
+
+            <div
+                class="modal-content"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modal-product-name">
+
+
+                <!-- Close Button -->
+
+                <button
+                    class="modal-close"
+                    id="modal-close"
+                    aria-label="Close product details">
+
+                    &times;
+
+                </button>
+
+
+                <!-- Product Image -->
+
+               <div class="modal-image">
+                    <img
+                        id="modal-product-image"
+                        src="images/superhero.png"
+                        alt="Product image">
+                </div>
+
+                <!-- Product Information -->
+
+                <div class="modal-info">
+
+                    <span
+                        class="product-category"
+                        id="modal-product-category">
+
+                    </span>
+
+
+                    <h2 id="modal-product-name">Product Details
+
+                    </h2>
+
+
+                    <p
+                        class="product-price"
+                        id="modal-product-price">
+
+                    </p>
+
+
+                    <p
+                        id="modal-product-description">
+
+                    </p>
+
+
+                    <button
+                        class="btn btn-primary"
+                        id="modal-add-cart">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <!-- About -->
+
+            <div class="footer-column">
+
+                <h3>
+                    <img src="images/toy-haven-logo.png" alt="Toy Haven">
+                </h3>
+
+                <p>
+                    Your interactive destination for
+                    toys, games and collectibles.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </div>
+
+
+            <!-- Support -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Support
+                </h3>
+
+                <a href="feedback.html">
+                    Feedback & Support
+                </a>
+
+                <a href="checkout.html">
+                    Checkout
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Toy Haven.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="js/main.js"></script>
+
+    <script src="js/products.js"></script>
+
+
+</body>
+
+</html>

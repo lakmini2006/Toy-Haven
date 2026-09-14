@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Toy Haven</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="favicon.svg">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <img src="images/toy-haven-logo.png" alt="Toy Haven">
+            </a>
+
+            <button class="hamburger"
+                id="hamburger"
+                aria-label="Open navigation menu">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="products.html">Products</a>
+                </li>
+
+                <li>
+                    <a href="wishlist.html">Wishlist</a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+                        Cart
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="feedback.html">Feedback</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <div class="container">
+
+            <p class="eyebrow">
+                Almost there!
+            </p>
+
+            <h1>
+                Checkout
+            </h1>
+
+            <p>
+                Complete your details and place your order.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CHECKOUT ================= -->
+
+    <main class="checkout-section">
+
+        <div class="container checkout-layout">
+
+
+            <!-- ============ CUSTOMER FORM ============ -->
+
+            <section class="checkout-form-card">
+
+                <h2>
+                    Customer Details
+                </h2>
+
+                <p class="checkout-intro">
+                    Please enter your information below.
+                </p>
+
+                <form id="checkout-form" novalidate>
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="form-group">
+
+                        <label for="full-name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="full-name"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required>
+
+                        <small
+                            class="form-error"
+                            id="full-name-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@email.com"
+                            required>
+
+                        <small
+                            class="form-error"
+                            id="email-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- ADDRESS -->
+
+                    <div class="form-group">
+
+                        <label for="address">
+                            Delivery Address
+                        </label>
+
+                        <textarea
+                            id="address"
+                            name="address"
+                            rows="4"
+                            placeholder="Enter your delivery address"
+                            required></textarea>
+
+                        <small
+                            class="form-error"
+                            id="address-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- PAYMENT -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Payment Method
+                        </label>
+
+                        <div class="payment-options">
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="card"
+                                    required>
+
+                                <span>
+                                    💳 Card
+                                </span>
+
+                            </label>
+
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="cod">
+
+                                <span>
+                                    💵 Cash on Delivery
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                        <small
+                            class="form-error"
+                            id="payment-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- CARD DETAILS -->
+
+                    <div
+                        class="card-details"
+                        id="card-details">
+
+                        <h3>
+                            Card Details
+                        </h3>
+
+                        <div class="form-group">
+
+                            <label for="card-number">
+                                Card Number
+                            </label>
+
+                            <input
+                                type="text"
+                                id="card-number"
+                                placeholder="1234 5678 9012 3456"
+                                maxlength="19">
+
+                        </div>
+
+                        <div class="card-row">
+
+                            <div class="form-group">
+
+                                <label for="expiry">
+                                    Expiry Date
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="expiry"
+                                    placeholder="MM/YY"
+                                    maxlength="5">
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="cvv">
+                                    CVV
+                                </label>
+
+                                <input
+                                    type="password"
+                                    id="cvv"
+                                    placeholder="123"
+                                    maxlength="3">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary checkout-submit">
+
+                        Place Order
+
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- ============ ORDER SUMMARY ============ -->
+
+            <aside class="order-summary-card">
+
+                <h2>
+                    Order Summary
+                </h2>
+
+                <div id="checkout-items"
+                    class="checkout-items">
+
+                    <!-- JavaScript will add cart items here -->
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Items
+                    </span>
+
+                    <strong id="checkout-item-count">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="checkout-subtotal">
+                        Rs. 0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="checkout-total">
+                        Rs. 0
+                    </strong>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= SUCCESS MESSAGE ================= -->
+
+    <div
+        class="success-overlay"
+        id="success-overlay">
+
+        <div class="success-box">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Order Successful! 🎉
+            </h2>
+
+            <p>
+                Thank you for shopping with Toy Haven.
+            </p>
+
+            <p>
+                Your order has been placed successfully.
+            </p>
+
+            <button
+                class="btn btn-primary"
+                id="continue-shopping">
+
+                Continue Shopping
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+
+                    <h2>
+                        <img src="images/toy-haven-logo.png" alt="Toy Haven">
+                    </h2>
+
+                    <p>
+                        Bringing smiles, one toy at a time.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="products.html">
+                        Products
+                    </a>
+
+                    <a href="wishlist.html">
+                        Wishlist
+                    </a>
+
+                    <a href="cart.html">
+                        Cart
+                    </a>
+
+                    <a href="feedback.html">
+                        Feedback
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 Toy Haven. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+
+</body>
+
+</html>

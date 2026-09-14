@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Feedback & Support | Toy Haven</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon"
+        href="favicon.svg">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html"
+                class="logo">
+
+                <img src="images/toy-haven-logo.png" alt="Toy Haven">
+
+            </a>
+
+
+           <button
+                class="hamburger"
+                id="hamburger"
+                aria-label="Open navigation menu">
+
+                ☰
+
+            </button>
+
+
+            <ul
+                class="nav-links"
+                id="navLinks">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="wishlist.html">
+                        Wishlist
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+                        Cart
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="feedback.html"
+                        class="active">
+                        Support
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <div class="container">
+
+            <p class="eyebrow">
+                We'd love to hear from you
+            </p>
+
+            <h1>
+                Feedback & Support 💬
+            </h1>
+
+            <p>
+                Have a question or suggestion?
+                We're here to help.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEEDBACK ================= -->
+
+    <main class="feedback-section">
+
+        <div class="container feedback-layout">
+
+
+            <!-- FEEDBACK FORM -->
+
+            <section class="feedback-form-card">
+
+                <h2>
+                    Send Us Your Feedback
+                </h2>
+
+                <p class="feedback-intro">
+                    Your feedback helps us make
+                    Toy Haven even better.
+                </p>
+
+
+                <form id="feedback-form"
+                    novalidate>
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="feedback-name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="feedback-name"
+                            placeholder="Enter your name"
+                            required>
+
+                        <small
+                            class="form-error"
+                            id="feedback-name-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="feedback-email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="feedback-email"
+                            placeholder="example@email.com"
+                            required>
+
+                        <small
+                            class="form-error"
+                            id="feedback-email-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- RATING -->
+
+                    <div class="form-group">
+
+                        <label for="feedback-rating">
+                            How would you rate your experience?
+                        </label>
+
+                        <select
+                            id="feedback-rating"
+                            required>
+
+                            <option value="">
+                                Select a rating
+                            </option>
+
+                            <option value="5">
+                                ⭐⭐⭐⭐⭐ Excellent
+                            </option>
+
+                            <option value="4">
+                                ⭐⭐⭐⭐ Very Good
+                            </option>
+
+                            <option value="3">
+                                ⭐⭐⭐ Good
+                            </option>
+
+                            <option value="2">
+                                ⭐⭐ Could Be Better
+                            </option>
+
+                            <option value="1">
+                                ⭐ Poor
+                            </option>
+
+                        </select>
+
+                        <small
+                            class="form-error"
+                            id="feedback-rating-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="form-group">
+
+                        <label for="feedback-message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="feedback-message"
+                            rows="6"
+                            placeholder="Tell us what you think..."
+                            required></textarea>
+
+                        <small
+                            class="form-error"
+                            id="feedback-message-error">
+                        </small>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        Submit Feedback
+
+                    </button>
+
+                </form>
+
+
+                <!-- SUCCESS -->
+
+                <div
+                    id="feedback-success"
+                    class="feedback-success">
+
+                    <div class="success-icon">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Thank You! 
+                    </h3>
+
+                    <p>
+                        Your feedback has been submitted
+                        successfully.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- SUPPORT INFO -->
+
+            <aside class="support-card">
+
+                <div class="support-icon">
+                    <img src="images/support-icon.png" alt="Customer support">
+                </div>
+
+                <h2>
+                    Need Help?
+                </h2>
+
+                <p>
+                    Check our frequently asked
+                    questions below.
+                </p>
+
+                <div class="support-contact">
+
+                    <p>
+                        <img src="images/support-icon-email.png" alt="">
+                        support@toyhaven.com
+                    </p>
+
+                    <p>
+                        <img src="images/support-icon-phone.png" alt="">
+                        +94 11 234 5678
+                    </p>
+
+                    <p>
+                        <img src="images/support-icon-clock.png" alt="">
+                        Mon – Fri, 9 AM – 5 PM
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <!-- ================= FAQ ================= -->
+
+        <section class="faq-section">
+
+            <div class="container">
+
+                <div class="faq-heading">
+
+                    <p class="eyebrow">
+                        Frequently Asked Questions
+                    </p>
+
+                    <h2>
+                        How Can We Help?
+                    </h2>
+
+                </div>
+
+
+                <div class="faq-list">
+
+
+                    <!-- FAQ 1 -->
+
+                    <article class="faq-item">
+
+                        <h3 class="faq-heading">
+                            How do I add a toy to my cart?
+                        </h3>
+
+                        <button
+                            class="faq-question"
+                            type="button">
+
+                            <span>
+                                How do I add a toy to my cart?
+                            </span>
+
+                            <span class="faq-icon">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Go to the Products page,
+                                choose a toy and click
+                                "Add to Cart". You can
+                                then view and manage your
+                                items from the Cart page.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- FAQ 2 -->
+
+                    <article class="faq-item">
+
+                        <h3 class="faq-heading">
+                            YOUR SECOND QUESTION HERE
+                        </h3>
+
+                        <button
+                            class="faq-question"
+                            type="button">
+
+                            <span>
+                                How does the wishlist work?
+                            </span>
+
+                            <span class="faq-icon">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Click the Wishlist button
+                                on any product to save it.
+                                You can manage your saved
+                                toys and update their
+                                status from the Wishlist
+                                page.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- FAQ 3 -->
+
+                    <article class="faq-item">
+
+                        <h3 class="faq-heading">
+                            YOUR THIRD QUESTION HERE
+                        </h3>
+
+                        <button
+                            class="faq-question"
+                            type="button">
+
+                            <span>
+                                What payment methods are available?
+                            </span>
+
+                            <span class="faq-icon">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Toy Haven provides simulated
+                                Card and Cash on Delivery
+                                payment options during
+                                checkout.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- FAQ 4 -->
+
+                    <article class="faq-item">
+
+                        <h3 class="faq-heading">
+                            YOUR FOURTH QUESTION HERE
+                        </h3>
+
+                        <button
+                            class="faq-question"
+                            type="button">
+
+                            <span>
+                                Can I change the quantity of a toy?
+                            </span>
+
+                            <span class="faq-icon">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Yes. Open your Cart and use
+                                the plus and minus buttons
+                                beside each product to
+                                change its quantity.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- FAQ 5 -->
+
+                    <article class="faq-item">
+
+                         <h3 class="faq-heading">
+                            YOUR FIFTH QUESTION HERE
+                        </h3>
+
+                        <button
+                            class="faq-question"
+                            type="button">
+
+                            <span>
+                                Is my cart saved if I refresh the page?
+                            </span>
+
+                            <span class="faq-icon">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Yes. Your cart and wishlist
+                                are stored in your browser's
+                                localStorage, so they remain
+                                available after refreshing
+                                the page.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+
+                    <h2>
+                        <img src="images/toy-haven-logo.png" alt="Toy Haven">
+                    </h2>
+
+                    <p>
+                        Bringing smiles, one toy at a time.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="products.html">
+                        Products
+                    </a>
+
+                    <a href="wishlist.html">
+                        Wishlist
+                    </a>
+
+                    <a href="cart.html">
+                        Cart
+                    </a>
+
+                    <a href="feedback.html">
+                        Support
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 Toy Haven.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/main.js"></script>
+
+    <script src="js/feedback.js"></script>
+
+</body>
+
+</html>

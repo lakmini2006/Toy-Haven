@@ -1,0 +1,18 @@
+{
+    "name": "Toy Haven",
+    "short_name": "Toy Haven",
+    "description": "A fun and friendly online toy store.",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fffaf7",
+    "theme_color": "#ff6268",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
+}

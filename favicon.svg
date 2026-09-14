@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" rx="20" fill="#F6EEDB"/>
+    <circle cx="50" cy="50" r="36" fill="#B94A3A"/>
+    <text
+        x="50"
+        y="63"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="38"
+        font-weight="700"
+        fill="#FFFDF8">TH</text>
+</svg>
