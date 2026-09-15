@@ -1,4 +1,4 @@
-const CACHE_NAME = "toy-haven-v5";
+const CACHE_NAME = "toy-haven-v6";
 
 self.addEventListener("install", function (event) {
     self.skipWaiting();
@@ -48,6 +48,14 @@ self.addEventListener("install", function (event) {
 ========================================= */
 
 self.addEventListener("fetch", function (event) {
+
+    if (event.request.method !== "GET") {
+        return;
+    }
+
+    if (!event.request.url.startsWith(self.location.origin)) {
+        return;
+    }
 
     event.respondWith(
 
