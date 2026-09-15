@@ -1,7 +1,6 @@
 /* Toy Haven - Service Worker */
 
-const CACHE_NAME = "toy-haven-v6";
-
+const CACHE_NAME = "toy-haven-v7";
 const FILES_TO_CACHE = [
     "index.html",
     "products.html",
