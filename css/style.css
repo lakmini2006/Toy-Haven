@@ -2204,14 +2204,14 @@ input {
 
 .btn-danger {
     background: #fff0f0;
-    color: #e74c3c;
+    color: #B94A3A;
 
     border: none;
 }
 
 
 .btn-danger:hover {
-    background: #e74c3c;
+    background: #B94A3A;
     color: #ffffff;
 }
 
@@ -2678,7 +2678,7 @@ input {
 
 .order-summary-card .summary-total span,
 .order-summary-card .summary-total strong {
-    color: #ff6268;
+    color: #B94A3A;
 
     font-size: 23px;
 }
