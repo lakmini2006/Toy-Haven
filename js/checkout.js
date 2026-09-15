@@ -1,20 +1,13 @@
-/* =========================================
-   TOY HAVEN - CHECKOUT JAVASCRIPT
-========================================= */
+/* Toy Haven - Checkout JavaScript */
 
-
-/* =========================================
-   GET CART
-========================================= */
+/* Cart */
 
 function getCheckoutCart() {
     return JSON.parse(localStorage.getItem("toyHavenCart")) || [];
 }
 
 
-/* =========================================
-   CHECKOUT ELEMENTS
-========================================= */
+/* Checkout Elements */
 
 const checkoutForm = document.getElementById("checkout-form");
 
@@ -39,9 +32,7 @@ const continueShopping =
     document.getElementById("continue-shopping");
 
 
-/* =========================================
-   DISPLAY ORDER SUMMARY
-========================================= */
+/* Display Order Summary */
 
 function displayCheckoutSummary() {
 
@@ -53,9 +44,6 @@ function displayCheckoutSummary() {
 
     let totalItems = 0;
     let totalPrice = 0;
-
-
-    /* EMPTY CART */
 
     if (cart.length === 0) {
 
@@ -72,9 +60,6 @@ function displayCheckoutSummary() {
         return;
     }
 
-
-    /* DISPLAY EACH ITEM */
-
     cart.forEach(function (item) {
 
         const itemSubtotal =
@@ -83,13 +68,11 @@ function displayCheckoutSummary() {
         totalItems += item.quantity;
         totalPrice += itemSubtotal;
 
-
         const checkoutItem =
             document.createElement("div");
 
         checkoutItem.className =
             "checkout-item";
-
 
         checkoutItem.innerHTML = `
 
@@ -120,13 +103,9 @@ function displayCheckoutSummary() {
 
         `;
 
-
         checkoutItems.appendChild(checkoutItem);
 
     });
-
-
-    /* UPDATE TOTALS */
 
     checkoutItemCount.textContent =
         totalItems;
@@ -139,15 +118,12 @@ function displayCheckoutSummary() {
 }
 
 
-/* =========================================
-   PAYMENT METHOD
-========================================= */
+/* Payment Method */
 
 const paymentOptions =
     document.querySelectorAll(
         'input[name="payment"]'
     );
-
 
 paymentOptions.forEach(function (option) {
 
@@ -168,9 +144,7 @@ paymentOptions.forEach(function (option) {
 });
 
 
-/* =========================================
-   VALIDATION HELPERS
-========================================= */
+/* Validation Helpers */
 
 function showError(elementId, message) {
 
@@ -190,14 +164,12 @@ function clearErrors() {
     showError("full-name-error", "");
     showError("email-error", "");
     showError("address-error", "");
-    showError("payment-error", "");
+    showError("payment-error");
 
 }
 
 
-/* =========================================
-   CHECK EMAIL
-========================================= */
+/* Email Validation */
 
 function isValidEmail(email) {
 
@@ -207,9 +179,7 @@ function isValidEmail(email) {
 }
 
 
-/* =========================================
-   CHECKOUT FORM
-========================================= */
+/* Checkout Form */
 
 if (checkoutForm) {
 
@@ -219,9 +189,7 @@ if (checkoutForm) {
 
             event.preventDefault();
 
-
             clearErrors();
-
 
             const fullName =
                 document.getElementById("full-name")
@@ -235,17 +203,15 @@ if (checkoutForm) {
                 document.getElementById("address")
                     .value.trim();
 
-
             const selectedPayment =
                 document.querySelector(
                     'input[name="payment"]:checked'
                 );
 
-
             let isValid = true;
 
 
-            /* FULL NAME */
+            /* Full Name */
 
             if (fullName === "") {
 
@@ -267,7 +233,7 @@ if (checkoutForm) {
             }
 
 
-            /* EMAIL */
+            /* Email */
 
             if (email === "") {
 
@@ -289,7 +255,7 @@ if (checkoutForm) {
             }
 
 
-            /* ADDRESS */
+            /* Address */
 
             if (address === "") {
 
@@ -311,7 +277,7 @@ if (checkoutForm) {
             }
 
 
-            /* PAYMENT */
+            /* Payment */
 
             if (!selectedPayment) {
 
@@ -324,7 +290,7 @@ if (checkoutForm) {
             }
 
 
-            /* CARD VALIDATION */
+            /* Card Validation */
 
             if (
                 selectedPayment &&
@@ -365,13 +331,20 @@ if (checkoutForm) {
 
 
                 if (expiry === "") {
+
                     alert(
-                    "Please enter the card expiry date."
+                        "Please enter the card expiry date."
                     );
 
                     isValid = false;
-                } else if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiry)) {
-                    alert("Expiry date must be in MM/YY format.");
+
+                } else if (
+                    !/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiry)
+                ) {
+
+                    alert(
+                        "Expiry date must be in MM/YY format."
+                    );
 
                     isValid = false;
                 }
@@ -397,20 +370,15 @@ if (checkoutForm) {
             }
 
 
-            /* STOP IF INVALID */
-
             if (!isValid) {
-
                 return;
-
             }
 
 
-            /* CHECK CART */
+            /* Check Cart */
 
             const cart =
                 getCheckoutCart();
-
 
             if (cart.length === 0) {
 
@@ -419,13 +387,10 @@ if (checkoutForm) {
                 );
 
                 return;
-
             }
 
 
-            /* =====================================
-               CALCULATE ORDER TOTAL
-            ===================================== */
+            /* Calculate Order Total */
 
             let orderTotal = 0;
 
@@ -437,9 +402,7 @@ if (checkoutForm) {
             });
 
 
-            /* =====================================
-               CREATE ORDER
-            ===================================== */
+            /* Create Order */
 
             const order = {
 
@@ -471,9 +434,7 @@ if (checkoutForm) {
             };
 
 
-            /* =====================================
-               SAVE ORDER HISTORY
-            ===================================== */
+            /* Save Order History */
 
             const orderHistory =
                 JSON.parse(
@@ -482,9 +443,7 @@ if (checkoutForm) {
                     )
                 ) || [];
 
-
             orderHistory.push(order);
-
 
             localStorage.setItem(
                 "toyHavenOrderHistory",
@@ -492,16 +451,14 @@ if (checkoutForm) {
             );
 
 
-            /* =====================================
-               CLEAR CART
-            ===================================== */
+            /* Clear Cart */
 
             localStorage.removeItem(
                 "toyHavenCart"
             );
 
 
-            /* UPDATE NAV CART COUNT */
+            /* Update Cart Count */
 
             if (
                 typeof updateCartCount ===
@@ -513,9 +470,7 @@ if (checkoutForm) {
             }
 
 
-            /* =====================================
-               SHOW SUCCESS MESSAGE
-            ===================================== */
+            /* Show Success Message */
 
             successOverlay.classList.add(
                 "show"
@@ -527,9 +482,7 @@ if (checkoutForm) {
 }
 
 
-/* =========================================
-   CONTINUE SHOPPING
-========================================= */
+/* Continue Shopping */
 
 if (continueShopping) {
 
@@ -546,8 +499,6 @@ if (continueShopping) {
 }
 
 
-/* =========================================
-   INITIALIZE
-========================================= */
+/* Initialise */
 
 displayCheckoutSummary();

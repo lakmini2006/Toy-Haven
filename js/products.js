@@ -1,11 +1,7 @@
-/* =========================================
-   TOY HAVEN - PRODUCT PAGE JAVASCRIPT
-========================================= */
+/* Toy Haven - Product Page JavaScript */
 
 
-/* =========================================
-   1. PRODUCT DATA
-========================================= */
+/* Product Data */
 
 const products = [
 
@@ -120,9 +116,7 @@ const products = [
 ];
 
 
-/* =========================================
-   2. GET PRODUCT GRID
-========================================= */
+/* Product Grid */
 
 const productGrid =
     document.getElementById("product-grid");
@@ -131,9 +125,7 @@ const noResults =
     document.getElementById("no-results");
 
 
-/* =========================================
-   3. DISPLAY PRODUCTS
-========================================= */
+/* Display Products */
 
 function displayProducts(productList) {
 
@@ -141,13 +133,7 @@ function displayProducts(productList) {
         return;
     }
 
-
-    /* Clear existing products */
-
     productGrid.innerHTML = "";
-
-
-    /* Check if products exist */
 
     if (productList.length === 0) {
 
@@ -158,15 +144,9 @@ function displayProducts(productList) {
         return;
     }
 
-
-    /* Hide no-results message */
-
     if (noResults) {
         noResults.style.display = "none";
     }
-
-
-    /* Create a card for every product */
 
     productList.forEach(function (product) {
 
@@ -174,7 +154,6 @@ function displayProducts(productList) {
             document.createElement("article");
 
         card.className = "shop-product-card";
-
 
         card.innerHTML = `
 
@@ -219,32 +198,21 @@ function displayProducts(productList) {
             </div>
         `;
 
-
-        /* Add card to grid */
-
         productGrid.appendChild(card);
 
     });
-
-
-    /* Add button events */
 
     addProductButtonEvents();
 
 }
 
 
-/* =========================================
-   4. PRODUCT BUTTON EVENTS
-========================================= */
+/* Product Button Events */
 
 function addProductButtonEvents() {
 
-    /* Add to Cart buttons */
-
     const addCartButtons =
         document.querySelectorAll(".add-to-cart");
-
 
     addCartButtons.forEach(function (button) {
 
@@ -259,12 +227,8 @@ function addProductButtonEvents() {
 
     });
 
-
-    /* View Details buttons */
-
     const viewButtons =
         document.querySelectorAll(".view-details");
-
 
     viewButtons.forEach(function (button) {
 
@@ -282,9 +246,7 @@ function addProductButtonEvents() {
 }
 
 
-/* =========================================
-   5. SHOPPING CART
-========================================= */
+/* Shopping Cart */
 
 function getCart() {
 
@@ -295,8 +257,6 @@ function getCart() {
 }
 
 
-/* Add product to cart */
-
 function addToCart(productId) {
 
     const product =
@@ -306,16 +266,11 @@ function addToCart(productId) {
 
         });
 
-
     if (!product) {
         return;
     }
 
-
     const cart = getCart();
-
-
-    /* Check if product already exists */
 
     const existingItem =
         cart.find(function (item) {
@@ -323,7 +278,6 @@ function addToCart(productId) {
             return item.id === productId;
 
         });
-
 
     if (existingItem) {
 
@@ -346,30 +300,19 @@ function addToCart(productId) {
 
     }
 
-
-    /* Save updated cart */
-
     localStorage.setItem(
         "toyHavenCart",
         JSON.stringify(cart)
     );
 
-
-    /* Update cart number */
-
     updateCartCount();
-
-
-    /* Give user feedback */
 
     alert(`${product.name} has been added to your cart!`);
 
 }
 
 
-/* =========================================
-   6. SEARCH PRODUCTS
-========================================= */
+/* Search Products */
 
 const searchInput =
     document.getElementById("product-search");
@@ -386,7 +329,6 @@ if (searchInput) {
                     .toLowerCase()
                     .trim();
 
-
             const filteredProducts =
                 products.filter(function (product) {
 
@@ -396,7 +338,6 @@ if (searchInput) {
 
                 });
 
-
             displayProducts(filteredProducts);
 
         }
@@ -405,9 +346,7 @@ if (searchInput) {
 }
 
 
-/* =========================================
-   7. CATEGORY FILTER
-========================================= */
+/* Category Filter */
 
 const filterButtons =
     document.querySelectorAll(".filter-btn");
@@ -419,8 +358,6 @@ filterButtons.forEach(function (button) {
         "click",
         function () {
 
-            /* Remove active state */
-
             filterButtons.forEach(
                 function (btn) {
 
@@ -431,17 +368,12 @@ filterButtons.forEach(function (button) {
                 }
             );
 
-
-            /* Add active state */
-
             button.classList.add(
                 "active-filter"
             );
 
-
             const selectedCategory =
                 button.dataset.category;
-
 
             if (selectedCategory === "All") {
 
@@ -450,7 +382,6 @@ filterButtons.forEach(function (button) {
                 return;
 
             }
-
 
             const filteredProducts =
                 products.filter(
@@ -462,7 +393,6 @@ filterButtons.forEach(function (button) {
                     }
                 );
 
-
             displayProducts(filteredProducts);
 
         }
@@ -471,9 +401,7 @@ filterButtons.forEach(function (button) {
 });
 
 
-/* =========================================
-   8. PRODUCT MODAL
-========================================= */
+/* Product Modal */
 
 const productModal =
     document.getElementById("product-modal");
@@ -505,8 +433,6 @@ const modalAddCart =
 let selectedModalProduct = null;
 
 
-/* Open modal */
-
 function openProductModal(productId) {
 
     const product =
@@ -516,14 +442,11 @@ function openProductModal(productId) {
 
         });
 
-
     if (!product || !productModal) {
         return;
     }
 
-
     selectedModalProduct = product;
-
 
     modalImage.src = product.image;
     modalImage.alt = product.name;
@@ -540,7 +463,6 @@ function openProductModal(productId) {
     modalDescription.textContent =
         product.description;
 
-
     productModal.classList.add("modal-open");
 
     productModal.setAttribute(
@@ -551,14 +473,11 @@ function openProductModal(productId) {
 }
 
 
-/* Close modal */
-
 function closeProductModal() {
 
     if (!productModal) {
         return;
     }
-
 
     productModal.classList.remove(
         "modal-open"
@@ -572,8 +491,6 @@ function closeProductModal() {
 }
 
 
-/* Close button */
-
 if (modalClose) {
 
     modalClose.addEventListener(
@@ -583,8 +500,6 @@ if (modalClose) {
 
 }
 
-
-/* Add from modal */
 
 if (modalAddCart) {
 
@@ -606,8 +521,6 @@ if (modalAddCart) {
 }
 
 
-/* Close modal when clicking outside */
-
 if (productModal) {
 
     productModal.addEventListener(
@@ -626,8 +539,6 @@ if (productModal) {
 }
 
 
-/* Close modal with Escape key */
-
 document.addEventListener(
     "keydown",
     function (event) {
@@ -642,14 +553,12 @@ document.addEventListener(
 );
 
 
-/* =========================================
-   9. DISPLAY PRODUCTS WHEN PAGE LOADS
-========================================= */
+/* Display Products on Page Load */
 
 displayProducts(products);
-/* =========================================
-   WISHLIST BUTTON CLICK
-========================================= */
+
+
+/* Wishlist */
 
 document.addEventListener("click", function (event) {
 
@@ -660,27 +569,24 @@ document.addEventListener("click", function (event) {
 
         const product =
             products.find(function (item) {
+
                 return item.id === productId;
+
             });
 
         if (!product) return;
-
-
-        /* Get existing wishlist */
 
         const wishlist =
             JSON.parse(
                 localStorage.getItem("toyHavenWishlist")
             ) || [];
 
-
-        /* Check if already exists */
-
         const alreadyExists =
             wishlist.some(function (item) {
-                return item.id === productId;
-            });
 
+                return item.id === productId;
+
+            });
 
         if (alreadyExists) {
 
@@ -690,9 +596,6 @@ document.addEventListener("click", function (event) {
 
             return;
         }
-
-
-        /* Add product */
 
         wishlist.push({
 
@@ -706,14 +609,10 @@ document.addEventListener("click", function (event) {
 
         });
 
-
-        /* Save to localStorage */
-
         localStorage.setItem(
             "toyHavenWishlist",
             JSON.stringify(wishlist)
         );
-
 
         alert(`${product.name} has been added to your wishlist!`);
 

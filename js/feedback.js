@@ -1,11 +1,6 @@
-/* =========================================
-   TOY HAVEN - FEEDBACK & SUPPORT JAVASCRIPT
-========================================= */
+/* Toy Haven - Feedback & Support JavaScript */
 
-
-/* =========================================
-   FEEDBACK FORM ELEMENTS
-========================================= */
+/* Feedback Form Elements */
 
 const feedbackForm =
     document.getElementById("feedback-form");
@@ -14,9 +9,7 @@ const feedbackSuccess =
     document.getElementById("feedback-success");
 
 
-/* =========================================
-   ERROR FUNCTION
-========================================= */
+/* Error Handling */
 
 function showFeedbackError(elementId, message) {
 
@@ -24,14 +17,13 @@ function showFeedbackError(elementId, message) {
         document.getElementById(elementId);
 
     if (error) {
+
         error.textContent = message;
+
     }
+
 }
 
-
-/* =========================================
-   CLEAR ERRORS
-========================================= */
 
 function clearFeedbackErrors() {
 
@@ -58,9 +50,7 @@ function clearFeedbackErrors() {
 }
 
 
-/* =========================================
-   EMAIL VALIDATION
-========================================= */
+/* Email Validation */
 
 function isFeedbackEmailValid(email) {
 
@@ -70,9 +60,7 @@ function isFeedbackEmailValid(email) {
 }
 
 
-/* =========================================
-   SUBMIT FEEDBACK
-========================================= */
+/* Submit Feedback */
 
 if (feedbackForm) {
 
@@ -84,39 +72,30 @@ if (feedbackForm) {
 
             clearFeedbackErrors();
 
-
-            /* GET VALUES */
-
             const name =
                 document.getElementById(
                     "feedback-name"
                 ).value.trim();
-
 
             const email =
                 document.getElementById(
                     "feedback-email"
                 ).value.trim();
 
-
             const rating =
                 document.getElementById(
                     "feedback-rating"
                 ).value;
-
 
             const message =
                 document.getElementById(
                     "feedback-message"
                 ).value.trim();
 
-
             let isValid = true;
 
 
-            /* =====================================
-               NAME VALIDATION
-            ===================================== */
+            /* Name Validation */
 
             if (name === "") {
 
@@ -139,9 +118,7 @@ if (feedbackForm) {
             }
 
 
-            /* =====================================
-               EMAIL VALIDATION
-            ===================================== */
+            /* Email Validation */
 
             if (email === "") {
 
@@ -164,9 +141,7 @@ if (feedbackForm) {
             }
 
 
-            /* =====================================
-               RATING VALIDATION
-            ===================================== */
+            /* Rating Validation */
 
             if (rating === "") {
 
@@ -180,9 +155,7 @@ if (feedbackForm) {
             }
 
 
-            /* =====================================
-               MESSAGE VALIDATION
-            ===================================== */
+            /* Message Validation */
 
             if (message === "") {
 
@@ -205,16 +178,12 @@ if (feedbackForm) {
             }
 
 
-            /* STOP IF INVALID */
-
             if (!isValid) {
                 return;
             }
 
 
-            /* =====================================
-               CREATE FEEDBACK OBJECT
-            ===================================== */
+            /* Create Feedback */
 
             const feedback = {
 
@@ -233,9 +202,7 @@ if (feedbackForm) {
             };
 
 
-            /* =====================================
-               GET EXISTING FEEDBACK
-            ===================================== */
+            /* Save Feedback */
 
             const feedbackHistory =
                 JSON.parse(
@@ -244,15 +211,7 @@ if (feedbackForm) {
                     )
                 ) || [];
 
-
-            /* ADD NEW FEEDBACK */
-
             feedbackHistory.push(feedback);
-
-
-            /* =====================================
-               SAVE TO LOCAL STORAGE
-            ===================================== */
 
             localStorage.setItem(
                 "toyHavenFeedback",
@@ -260,14 +219,11 @@ if (feedbackForm) {
             );
 
 
-            /* =====================================
-               SHOW SUCCESS
-            ===================================== */
+            /* Show Success */
 
             feedbackForm.style.display = "none";
 
             feedbackSuccess.classList.add("show");
-
 
         }
     );
@@ -275,15 +231,12 @@ if (feedbackForm) {
 }
 
 
-/* =========================================
-   FAQ ACCORDION
-========================================= */
+/* FAQ Accordion */
 
 const faqQuestions =
     document.querySelectorAll(
         ".faq-question"
     );
-
 
 faqQuestions.forEach(function (question) {
 
@@ -293,9 +246,6 @@ faqQuestions.forEach(function (question) {
 
             const faqItem =
                 question.closest(".faq-item");
-
-
-            /* Close other FAQ items */
 
             document
                 .querySelectorAll(".faq-item")
@@ -308,9 +258,6 @@ faqQuestions.forEach(function (question) {
                     }
 
                 });
-
-
-            /* Toggle selected item */
 
             faqItem.classList.toggle("active");
 

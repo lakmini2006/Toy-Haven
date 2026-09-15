@@ -1,8 +1,6 @@
-const CACHE_NAME = "toy-haven-v6";
+/* Toy Haven - Service Worker */
 
-self.addEventListener("install", function (event) {
-    self.skipWaiting();
-});
+const CACHE_NAME = "toy-haven-v6";
 
 const FILES_TO_CACHE = [
     "index.html",
@@ -23,11 +21,11 @@ const FILES_TO_CACHE = [
 ];
 
 
-/* =========================================
-   INSTALL
-========================================= */
+/* Install */
 
 self.addEventListener("install", function (event) {
+
+    self.skipWaiting();
 
     event.waitUntil(
 
@@ -43,9 +41,7 @@ self.addEventListener("install", function (event) {
 });
 
 
-/* =========================================
-   FETCH
-========================================= */
+/* Fetch */
 
 self.addEventListener("fetch", function (event) {
 
@@ -86,22 +82,33 @@ self.addEventListener("fetch", function (event) {
 });
 
 
-/* =========================================
-   ACTIVATE
-========================================= */
+/* Activate */
 
 self.addEventListener("activate", function (event) {
+
     event.waitUntil(
-        caches.keys().then(function (cacheNames) {
-            return Promise.all(
-                cacheNames.map(function (cacheName) {
-                    if (cacheName !== CACHE_NAME) {
-                        return caches.delete(cacheName);
-                    }
-                })
-            );
-        })
+
+        caches.keys()
+            .then(function (cacheNames) {
+
+                return Promise.all(
+
+                    cacheNames.map(function (cacheName) {
+
+                        if (cacheName !== CACHE_NAME) {
+
+                            return caches.delete(cacheName);
+
+                        }
+
+                    })
+
+                );
+
+            })
+
     );
 
     self.clients.claim();
+
 });

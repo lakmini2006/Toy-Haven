@@ -1,11 +1,6 @@
-/* =========================================
-   TOY HAVEN - MAIN JAVASCRIPT
-========================================= */
+/* Toy Haven - Main JavaScript */
 
-
-/* =========================================
-   1. MOBILE NAVIGATION
-========================================= */
+/* Mobile Navigation */
 
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
@@ -21,9 +16,7 @@ if (hamburger && navLinks) {
 }
 
 
-/* =========================================
-   2. HERO SLIDER
-========================================= */
+/* Hero Slider */
 
 const heroSlides = document.querySelectorAll(".hero-slide");
 const heroDots = document.querySelectorAll(".hero-dot");
@@ -34,15 +27,11 @@ const nextButton = document.getElementById("hero-next");
 let currentSlide = 0;
 
 
-/* Show a specific slide */
-
 function showSlide(index) {
 
     if (heroSlides.length === 0) {
         return;
     }
-
-    /* Make sure the index stays within the slide range */
 
     if (index >= heroSlides.length) {
         currentSlide = 0;
@@ -56,17 +45,11 @@ function showSlide(index) {
         currentSlide = index;
     }
 
-
-    /* Remove active class from all slides */
-
     heroSlides.forEach(function (slide) {
 
         slide.classList.remove("active-slide");
 
     });
-
-
-    /* Remove active class from all dots */
 
     heroDots.forEach(function (dot) {
 
@@ -74,13 +57,7 @@ function showSlide(index) {
 
     });
 
-
-    /* Activate current slide */
-
     heroSlides[currentSlide].classList.add("active-slide");
-
-
-    /* Activate current dot */
 
     if (heroDots[currentSlide]) {
 
@@ -91,16 +68,12 @@ function showSlide(index) {
 }
 
 
-/* Next slide */
-
 function nextSlide() {
 
     showSlide(currentSlide + 1);
 
 }
 
-
-/* Previous slide */
 
 function previousSlide() {
 
@@ -109,8 +82,6 @@ function previousSlide() {
 }
 
 
-/* Next button */
-
 if (nextButton) {
 
     nextButton.addEventListener("click", nextSlide);
@@ -118,16 +89,12 @@ if (nextButton) {
 }
 
 
-/* Previous button */
-
 if (previousButton) {
 
     previousButton.addEventListener("click", previousSlide);
 
 }
 
-
-/* Dot buttons */
 
 heroDots.forEach(function (dot, index) {
 
@@ -140,8 +107,6 @@ heroDots.forEach(function (dot, index) {
 });
 
 
-/* Automatically change slide every 5 seconds */
-
 if (heroSlides.length > 0) {
 
     setInterval(function () {
@@ -153,9 +118,7 @@ if (heroSlides.length > 0) {
 }
 
 
-/* =========================================
-   3. FEATURED PRODUCT OF THE DAY
-========================================= */
+/* Product of the Day */
 
 const featuredProducts = [
 
@@ -180,8 +143,6 @@ const featuredProducts = [
 ];
 
 
-/* Select today's product */
-
 function getProductOfTheDay() {
 
     const today = new Date();
@@ -196,8 +157,6 @@ function getProductOfTheDay() {
 }
 
 
-/* Display Product of the Day */
-
 function displayProductOfTheDay() {
 
     const description =
@@ -209,9 +168,7 @@ function displayProductOfTheDay() {
         return;
     }
 
-
     const product = getProductOfTheDay();
-
 
     description.textContent =
         `${product.name} — ${product.category} — Rs. ${product.price.toLocaleString()}`;
@@ -219,14 +176,10 @@ function displayProductOfTheDay() {
 }
 
 
-/* Run Product of the Day */
-
 displayProductOfTheDay();
 
 
-/* =========================================
-   4. NEWSLETTER
-========================================= */
+/* Newsletter */
 
 const newsletterForm =
     document.getElementById("newsletter-form");
@@ -242,15 +195,9 @@ if (newsletterForm) {
 
     newsletterForm.addEventListener("submit", function (event) {
 
-        /* Prevent page refresh */
-
         event.preventDefault();
 
-
         const email = newsletterEmail.value.trim();
-
-
-        /* Check email */
 
         if (email === "") {
 
@@ -261,22 +208,13 @@ if (newsletterForm) {
 
         }
 
-
-        /* Save email to localStorage */
-
         localStorage.setItem(
             "newsletterEmail",
             email
         );
 
-
-        /* Show success message */
-
         newsletterMessage.textContent =
             "Thank you for subscribing to Toy Haven! 🎉";
-
-
-        /* Clear input */
 
         newsletterEmail.value = "";
 
@@ -285,33 +223,23 @@ if (newsletterForm) {
 }
 
 
-/* =========================================
-   5. CART COUNT
-========================================= */
+/* Cart Count */
 
 function updateCartCount() {
 
     const cartCount =
         document.getElementById("cart-count");
 
-
     if (!cartCount) {
         return;
     }
-
-
-    /* Get cart from localStorage */
 
     const cart =
         JSON.parse(
             localStorage.getItem("toyHavenCart")
         ) || [];
 
-
-    /* Calculate total quantity */
-
     let totalItems = 0;
-
 
     cart.forEach(function (item) {
 
@@ -319,20 +247,15 @@ function updateCartCount() {
 
     });
 
-
-    /* Display quantity */
-
     cartCount.textContent = totalItems;
 
 }
 
 
-/* Run cart counter */
-
 updateCartCount();
-/* =========================================
-   SERVICE WORKER
-========================================= */
+
+
+/* Service Worker */
 
 if ("serviceWorker" in navigator) {
 

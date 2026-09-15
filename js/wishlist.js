@@ -1,22 +1,12 @@
-/* =========================================
-   TOY HAVEN - WISHLIST JAVASCRIPT
-========================================= */
+/* Toy Haven - Wishlist JavaScript */
 
-
-/* =========================================
-   GET WISHLIST
-========================================= */
+/* Wishlist Storage */
 
 function getWishlist() {
     return JSON.parse(
         localStorage.getItem("toyHavenWishlist")
     ) || [];
 }
-
-
-/* =========================================
-   SAVE WISHLIST
-========================================= */
 
 function saveWishlist(wishlist) {
     localStorage.setItem(
@@ -26,9 +16,7 @@ function saveWishlist(wishlist) {
 }
 
 
-/* =========================================
-   ADD TO WISHLIST
-========================================= */
+/* Add to Wishlist */
 
 function addToWishlist(productId) {
 
@@ -40,13 +28,9 @@ function addToWishlist(productId) {
 
     if (!product) return;
 
-
-    /* Check if already added */
-
     const alreadyExists = wishlist.some(function (item) {
         return item.id === productId;
     });
-
 
     if (alreadyExists) {
 
@@ -54,9 +38,6 @@ function addToWishlist(productId) {
 
         return;
     }
-
-
-    /* Add product with default status */
 
     wishlist.push({
         id: product.id,
@@ -68,20 +49,15 @@ function addToWishlist(productId) {
         status: "Interested"
     });
 
-
     saveWishlist(wishlist);
 
-
     alert(`${product.name} has been added to your wishlist!`);
-
 
     displayWishlist();
 }
 
 
-/* =========================================
-   DISPLAY WISHLIST
-========================================= */
+/* Display Wishlist */
 
 function displayWishlist() {
 
@@ -93,13 +69,9 @@ function displayWishlist() {
 
     if (!wishlistContainer) return;
 
-
     const wishlist = getWishlist();
 
     wishlistContainer.innerHTML = "";
-
-
-    /* EMPTY WISHLIST */
 
     if (wishlist.length === 0) {
 
@@ -110,13 +82,9 @@ function displayWishlist() {
         return;
     }
 
-
     if (emptyWishlist) {
         emptyWishlist.style.display = "none";
     }
-
-
-    /* DISPLAY ITEMS */
 
     wishlist.forEach(function (item) {
 
@@ -125,7 +93,6 @@ function displayWishlist() {
 
         wishlistCard.className =
             "wishlist-card";
-
 
         wishlistCard.innerHTML = `
 
@@ -150,7 +117,6 @@ function displayWishlist() {
                 <p class="wishlist-description">
                     ${item.description}
                 </p>
-
 
                 <div class="wishlist-status">
 
@@ -182,7 +148,6 @@ function displayWishlist() {
 
                 </div>
 
-
                 <div class="wishlist-buttons">
 
                     <button
@@ -206,28 +171,20 @@ function displayWishlist() {
             </div>
         `;
 
-
         wishlistContainer.appendChild(wishlistCard);
 
     });
-
 
     addWishlistEvents();
 }
 
 
-/* =========================================
-   WISHLIST EVENTS
-========================================= */
+/* Wishlist Events */
 
 function addWishlistEvents() {
 
-
-    /* STATUS CHANGE */
-
     const statusSelects =
         document.querySelectorAll(".status-select");
-
 
     statusSelects.forEach(function (select) {
 
@@ -242,7 +199,6 @@ function addWishlistEvents() {
                 return product.id === productId;
             });
 
-
             if (item) {
 
                 item.status = select.value;
@@ -255,12 +211,8 @@ function addWishlistEvents() {
 
     });
 
-
-    /* REMOVE */
-
     const removeButtons =
         document.querySelectorAll(".remove-wishlist");
-
 
     removeButtons.forEach(function (button) {
 
@@ -275,12 +227,8 @@ function addWishlistEvents() {
 
     });
 
-
-    /* ADD TO CART */
-
     const cartButtons =
         document.querySelectorAll(".wishlist-cart");
-
 
     cartButtons.forEach(function (button) {
 
@@ -298,9 +246,7 @@ function addWishlistEvents() {
 }
 
 
-/* =========================================
-   REMOVE FROM WISHLIST
-========================================= */
+/* Remove from Wishlist */
 
 function removeFromWishlist(productId) {
 
@@ -311,7 +257,6 @@ function removeFromWishlist(productId) {
             return item.id !== productId;
         });
 
-
     saveWishlist(updatedWishlist);
 
     displayWishlist();
@@ -319,9 +264,7 @@ function removeFromWishlist(productId) {
 }
 
 
-/* =========================================
-   ADD WISHLIST ITEM TO CART
-========================================= */
+/* Add Wishlist Item to Cart */
 
 function addWishlistItemToCart(productId) {
 
@@ -334,18 +277,15 @@ function addWishlistItemToCart(productId) {
 
     if (!wishlistItem) return;
 
-
     const cart =
         JSON.parse(
             localStorage.getItem("toyHavenCart")
         ) || [];
 
-
     const existingItem =
         cart.find(function (item) {
             return item.id === productId;
         });
-
 
     if (existingItem) {
 
@@ -367,28 +307,22 @@ function addWishlistItemToCart(productId) {
 
     }
 
-
     localStorage.setItem(
         "toyHavenCart",
         JSON.stringify(cart)
     );
 
-
     updateCartCount();
-
 
     alert(`${wishlistItem.name} has been added to your cart!`);
 
 }
 
 
-/* =========================================
-   CONNECT PRODUCT PAGE WISHLIST BUTTONS
-========================================= */
+/* Product Page Wishlist Buttons */
 
 const wishlistButtons =
     document.querySelectorAll(".add-to-wishlist");
-
 
 wishlistButtons.forEach(function (button) {
 
@@ -404,8 +338,6 @@ wishlistButtons.forEach(function (button) {
 });
 
 
-/* =========================================
-   INITIALIZE WISHLIST PAGE
-========================================= */
+/* Initialise */
 
 displayWishlist();

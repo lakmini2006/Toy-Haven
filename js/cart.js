@@ -1,11 +1,6 @@
-/* =========================================
-   TOY HAVEN - SHOPPING CART JAVASCRIPT
-========================================= */
+/* Toy Haven - Shopping Cart JavaScript */
 
-
-/* =========================================
-   1. GET CART FROM LOCAL STORAGE
-========================================= */
+/* Cart Storage */
 
 function getCartItems() {
 
@@ -14,11 +9,6 @@ function getCartItems() {
     ) || [];
 
 }
-
-
-/* =========================================
-   2. SAVE CART TO LOCAL STORAGE
-========================================= */
 
 function saveCartItems(cart) {
 
@@ -30,9 +20,7 @@ function saveCartItems(cart) {
 }
 
 
-/* =========================================
-   3. CART ELEMENTS
-========================================= */
+/* Cart Elements */
 
 const cartItemsContainer =
     document.getElementById("cart-items");
@@ -53,9 +41,7 @@ const clearCartButton =
     document.getElementById("clear-cart");
 
 
-/* =========================================
-   4. DISPLAY CART
-========================================= */
+/* Display Cart */
 
 function displayCart() {
 
@@ -63,26 +49,12 @@ function displayCart() {
         return;
     }
 
-
     const cart = getCartItems();
-
-
-    /* Clear previous content */
 
     cartItemsContainer.innerHTML = "";
 
-
-    /* Calculate total quantity */
-
     let totalItems = 0;
-
-
-    /* Calculate total price */
-
     let totalPrice = 0;
-
-
-    /* Check whether cart is empty */
 
     if (cart.length === 0) {
 
@@ -96,40 +68,28 @@ function displayCart() {
 
     }
 
-
-    /* Hide empty cart message */
-
     if (emptyCart) {
         emptyCart.style.display = "none";
     }
-
-
-    /* Create each cart item */
 
     cart.forEach(function (item) {
 
         const itemSubtotal =
             item.price * item.quantity;
 
-
         totalItems += item.quantity;
-
         totalPrice += itemSubtotal;
-
 
         const cartItem =
             document.createElement("article");
 
-
         cartItem.className = "cart-item";
-
 
         cartItem.innerHTML = `
 
             <div class="cart-item-image">
                 <img src="${item.image}" alt="${item.name}">
             </div>
-
 
             <div class="cart-item-details">
 
@@ -148,7 +108,6 @@ function displayCart() {
 
             </div>
 
-
             <div class="quantity-controls">
 
                 <button
@@ -160,11 +119,9 @@ function displayCart() {
 
                 </button>
 
-
                 <span class="quantity">
                     ${item.quantity}
                 </span>
-
 
                 <button
                     class="quantity-btn increase"
@@ -176,7 +133,6 @@ function displayCart() {
                 </button>
 
             </div>
-
 
             <div class="cart-item-subtotal">
 
@@ -190,7 +146,6 @@ function displayCart() {
 
             </div>
 
-
             <button
                 class="remove-item"
                 data-id="${item.id}"
@@ -202,30 +157,21 @@ function displayCart() {
 
         `;
 
-
         cartItemsContainer.appendChild(cartItem);
 
     });
-
-
-    /* Update summary */
 
     updateCartSummary(
         totalItems,
         totalPrice
     );
 
-
-    /* Add button events */
-
     addCartButtonEvents();
 
 }
 
 
-/* =========================================
-   5. UPDATE CART SUMMARY
-========================================= */
+/* Cart Summary */
 
 function updateCartSummary(
     totalItems,
@@ -239,14 +185,12 @@ function updateCartSummary(
 
     }
 
-
     if (cartSubtotal) {
 
         cartSubtotal.textContent =
             `Rs. ${totalPrice.toLocaleString()}`;
 
     }
-
 
     if (cartTotal) {
 
@@ -258,20 +202,14 @@ function updateCartSummary(
 }
 
 
-/* =========================================
-   6. ADD CART BUTTON EVENTS
-========================================= */
+/* Cart Button Events */
 
 function addCartButtonEvents() {
-
-
-    /* Increase quantity */
 
     const increaseButtons =
         document.querySelectorAll(
             ".quantity-btn.increase"
         );
-
 
     increaseButtons.forEach(
         function (button) {
@@ -294,14 +232,10 @@ function addCartButtonEvents() {
         }
     );
 
-
-    /* Decrease quantity */
-
     const decreaseButtons =
         document.querySelectorAll(
             ".quantity-btn.decrease"
         );
-
 
     decreaseButtons.forEach(
         function (button) {
@@ -324,14 +258,10 @@ function addCartButtonEvents() {
         }
     );
 
-
-    /* Remove item */
-
     const removeButtons =
         document.querySelectorAll(
             ".remove-item"
         );
-
 
     removeButtons.forEach(
         function (button) {
@@ -356,9 +286,7 @@ function addCartButtonEvents() {
 }
 
 
-/* =========================================
-   7. CHANGE QUANTITY
-========================================= */
+/* Change Quantity */
 
 function changeQuantity(
     productId,
@@ -367,7 +295,6 @@ function changeQuantity(
 
     const cart = getCartItems();
 
-
     const item =
         cart.find(function (cartItem) {
 
@@ -375,18 +302,11 @@ function changeQuantity(
 
         });
 
-
     if (!item) {
         return;
     }
 
-
-    /* Change quantity */
-
     item.quantity += change;
-
-
-    /* Don't allow zero or negative quantity */
 
     if (item.quantity <= 0) {
 
@@ -396,7 +316,6 @@ function changeQuantity(
                 return cartItem.id !== productId;
 
             });
-
 
         saveCartItems(updatedCart);
 
@@ -408,27 +327,17 @@ function changeQuantity(
 
     }
 
-
-    /* Refresh cart */
-
     displayCart();
-
-
-    /* Update navigation cart count */
-
     updateCartCount();
 
 }
 
 
-/* =========================================
-   8. REMOVE PRODUCT
-========================================= */
+/* Remove Product */
 
 function removeFromCart(productId) {
 
     const cart = getCartItems();
-
 
     const updatedCart =
         cart.filter(function (item) {
@@ -437,21 +346,15 @@ function removeFromCart(productId) {
 
         });
 
-
     saveCartItems(updatedCart);
 
-
     displayCart();
-
-
     updateCartCount();
 
 }
 
 
-/* =========================================
-   9. CLEAR ENTIRE CART
-========================================= */
+/* Clear Cart */
 
 if (clearCartButton) {
 
@@ -462,9 +365,6 @@ if (clearCartButton) {
             const cart =
                 getCartItems();
 
-
-            /* Don't do anything if already empty */
-
             if (cart.length === 0) {
 
                 alert("Your cart is already empty.");
@@ -473,33 +373,21 @@ if (clearCartButton) {
 
             }
 
-
-            /* Ask for confirmation */
-
             const confirmed =
                 confirm(
                     "Are you sure you want to clear your cart?"
                 );
 
-
             if (!confirmed) {
                 return;
             }
-
-
-            /* Empty cart */
 
             localStorage.removeItem(
                 "toyHavenCart"
             );
 
-
-            /* Refresh page content */
-
             displayCart();
-
             updateCartCount();
-
 
             alert(
                 "Your cart has been cleared."
@@ -511,8 +399,6 @@ if (clearCartButton) {
 }
 
 
-/* =========================================
-   10. DISPLAY CART WHEN PAGE LOADS
-========================================= */
+/* Initialise Cart */
 
 displayCart();

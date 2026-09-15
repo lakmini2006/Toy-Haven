@@ -1,9 +1,3 @@
-/* =========================================================
-   TOY HAVEN - WARM PLAYFUL PREMIUM THEME
-   Familiar cream + brick + mustard palette.
-   Built to work with the existing six-page Toy Haven HTML/JS.
-   ========================================================= */
-
 :root {
     --cream: #F7F0E2;
     --brown: #35251C;
@@ -13,15 +7,6 @@
     --white: #FFFDF9;
     --border: #D9C7A8;
 }
-
-/* =========================================
-   TOY HAVEN - MAIN STYLESHEET
-========================================= */
-
-
-/* =========================================
-   1. GENERAL RESET
-========================================= */
 
 * {
     margin: 0;
@@ -50,21 +35,11 @@ input {
     font-family: inherit;
 }
 
-
-/* =========================================
-   2. REUSABLE CONTAINER
-========================================= */
-
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
-
-
-/* =========================================
-   3. HEADER & NAVIGATION
-========================================= */
 
 .header {
     background-color: var(--white);
@@ -102,15 +77,18 @@ input {
     top: 70px;
     left: 0;
     width: 100%;
-
     background-color: var(--white);
-
     flex-direction: column;
     align-items: center;
-
     padding: 20px 0;
-
+    margin: 0;
+    list-style: none;
     box-shadow: 0 5px 10px rgba(59, 42, 32, 0.12);
+}
+.nav-links li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
@@ -152,11 +130,6 @@ input {
 
     color: #333;
 }
-
-
-/* =========================================
-   4. HERO SECTION
-========================================= */
 
 .hero {
     position: relative;
@@ -227,9 +200,6 @@ input {
     color: #555;
 }
 
-
-/* Hero Controls */
-
 .hero-control {
     position: absolute;
 
@@ -264,9 +234,6 @@ input {
     right: 20px;
 }
 
-
-/* Hero Dots */
-
 .hero-dots {
     position: absolute;
 
@@ -297,11 +264,6 @@ input {
     background-color: #ff6b6b;
     transform: scale(1.3);
 }
-
-
-/* =========================================
-   5. BUTTONS
-========================================= */
 
 .btn {
     display: inline-block;
@@ -344,11 +306,6 @@ input {
     border: 2px solid var(--brick);
 }
 
-
-/* =========================================
-   6. SECTION HEADINGS
-========================================= */
-
 .section-heading {
     text-align: center;
 
@@ -380,11 +337,6 @@ input {
 
     margin-bottom: 10px;
 }
-
-
-/* =========================================
-   7. FEATURED PRODUCTS
-========================================= */
 
 .featured-section {
     padding: 80px 5%;
@@ -461,11 +413,6 @@ input {
     margin-bottom: 18px;
 }
 
-
-/* =========================================
-   9. WHY TOY HAVEN
-========================================= */
-
 .why-section {
     padding: 80px 5%;
 }
@@ -511,11 +458,6 @@ input {
 
     margin-bottom: 10px;
 }
-
-
-/* =========================================
-   10. NEWSLETTER
-========================================= */
 
 .newsletter {
     padding: 80px 5%;
@@ -570,11 +512,6 @@ input {
 
     font-weight: 600;
 }
-
-
-/* =========================================
-   11. FOOTER
-========================================= */
 
 .footer {
     background-color: #151515;
@@ -631,11 +568,6 @@ input {
     color: #666;
 }
 
-
-/* =========================================
-   12. ACCESSIBILITY
-========================================= */
-
 .sr-only {
     position: absolute;
 
@@ -653,11 +585,6 @@ input {
 
     border: 0;
 }
-
-
-/* =========================================
-   13. TABLET
-========================================= */
 
 @media (min-width: 600px) {
 
@@ -683,11 +610,6 @@ input {
 
 }
 
-
-/* =========================================
-   14. DESKTOP
-========================================= */
-
 @media (min-width: 900px) {
 
     .hamburger {
@@ -704,6 +626,8 @@ input {
         flex-direction: row;
 
         padding: 0;
+
+        margin: 0;
 
         box-shadow: none;
 
@@ -722,24 +646,13 @@ input {
 
 }
 
-
-/* =========================================
-   15. MOBILE NAVIGATION ACTIVE STATE
-========================================= */
-
 .nav-links.show {
     display: flex;
 }
-/* =========================================
-   PRODUCT PAGE
-========================================= */
 
 .page-header {
     padding: 70px 5% 30px;
 }
-
-
-/* Product controls */
 
 .product-section {
     width: 90%;
@@ -754,9 +667,6 @@ input {
     gap: 25px;
     margin-bottom: 40px;
 }
-
-
-/* Search */
 
 .search-box {
     display: flex;
@@ -780,9 +690,6 @@ input {
 .search-box input:focus {
     border-color: #ff6b6b;
 }
-
-
-/* Category buttons */
 
 .filter-buttons {
     display: flex;
@@ -810,11 +717,6 @@ input {
     background-color: #b94a3a;
     color: #ffffff;
 }
-
-
-/* =========================================
-   PRODUCT GRID
-========================================= */
 
 .product-grid {
     display: grid;
@@ -845,9 +747,6 @@ input {
         0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
-
-/* Product image */
-
 .shop-product-image {
     height: 240px;
 
@@ -865,9 +764,6 @@ input {
     font-size: 7rem;
 }
 
-
-/* Product information */
-
 .shop-product-info {
     padding: 25px;
 }
@@ -884,9 +780,6 @@ input {
     margin-bottom: 20px;
 }
 
-
-/* Product buttons */
-
 .product-card-buttons {
     display: flex;
 
@@ -900,9 +793,6 @@ input {
     padding: 10px 16px;
 }
 
-
-/* No results */
-
 .no-results {
     display: none;
 
@@ -911,14 +801,7 @@ input {
     padding: 60px 20px;
 }
 
-
-/* =========================================
-   PRODUCT MODAL
-========================================= */
-
 .product-modal {
-
-    /* Hidden by default */
 
     position: fixed;
 
@@ -947,18 +830,12 @@ input {
         visibility 0.3s ease;
 }
 
-
-/* Show modal */
-
 .product-modal.modal-open {
 
     opacity: 1;
 
     visibility: visible;
 }
-
-
-/* Modal box */
 
 .modal-content {
 
@@ -988,16 +865,10 @@ input {
     transition: transform 0.3s ease;
 }
 
-
-/* Modal animation */
-
 .product-modal.modal-open .modal-content {
 
     transform: scale(1);
 }
-
-
-/* Close button */
 
 .modal-close {
 
@@ -1037,9 +908,6 @@ input {
     transform: rotate(90deg);
 }
 
-
-/* Modal image */
-
 .modal-image {
 
     min-height: 250px;
@@ -1060,9 +928,6 @@ input {
     font-size: 8rem;
 }
 
-
-/* Modal information */
-
 .modal-info {
 
     padding: 10px;
@@ -1081,11 +946,6 @@ input {
 
     color: #555;
 }
-
-
-/* =========================================
-   PRODUCT PAGE RESPONSIVE DESIGN
-========================================= */
 
 @media (min-width: 600px) {
 
@@ -1114,7 +974,6 @@ input {
 
 }
 
-
 @media (min-width: 900px) {
 
     .product-grid {
@@ -1134,26 +993,17 @@ input {
     }
 
 }
-/* =========================================
-   WISHLIST PAGE
-========================================= */
 
 .wishlist-section {
     padding: 70px 0;
     min-height: 500px;
 }
 
-
-/* WISHLIST GRID */
-
 .wishlist-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
-
-
-/* WISHLIST CARD */
 
 .wishlist-card {
     display: flex;
@@ -1168,16 +1018,12 @@ input {
     animation: wishlistFadeIn 0.5s ease;
 }
 
-
 .wishlist-card:hover {
     transform: translateY(-5px);
 
     box-shadow:
         0 15px 35px rgba(0, 0, 0, 0.12);
 }
-
-
-/* WISHLIST IMAGE */
 
 .wishlist-image {
     min-width: 180px;
@@ -1194,21 +1040,16 @@ input {
     font-size: 85px;
 }
 
-
-/* WISHLIST INFORMATION */
-
 .wishlist-info {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-
 .wishlist-info h2 {
     margin: 7px 0 5px;
     font-size: 24px;
 }
-
 
 .wishlist-price {
     margin: 5px 0 10px;
@@ -1219,7 +1060,6 @@ input {
     color: #ff6268;
 }
 
-
 .wishlist-description {
     margin: 0 0 15px;
 
@@ -1229,9 +1069,6 @@ input {
     font-size: 14px;
 }
 
-
-/* STATUS */
-
 .wishlist-status {
     display: flex;
     align-items: center;
@@ -1240,11 +1077,9 @@ input {
     margin-bottom: 18px;
 }
 
-
 .wishlist-status label {
     font-weight: 600;
 }
-
 
 .status-select {
     padding: 9px 12px;
@@ -1262,13 +1097,9 @@ input {
     outline: none;
 }
 
-
 .status-select:focus {
     border-color: #ff6268;
 }
-
-
-/* BUTTONS */
 
 .wishlist-buttons {
     display: flex;
@@ -1276,15 +1107,11 @@ input {
     margin-top: auto;
 }
 
-
 .wishlist-buttons .btn {
     border: none;
     cursor: pointer;
     font-family: inherit;
 }
-
-
-/* EMPTY WISHLIST */
 
 .empty-wishlist {
     text-align: center;
@@ -1302,28 +1129,27 @@ input {
         0 10px 30px rgba(0, 0, 0, 0.07);
 }
 
-
 .empty-wishlist-icon {
     font-size: 65px;
     margin-bottom: 15px;
 
     animation: heartBeat 1.5s infinite;
 }
-
+.empty-wishlist-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
 
 .empty-wishlist h2 {
     margin-bottom: 10px;
     font-size: 28px;
 }
 
-
 .empty-wishlist p {
     color: #666;
     margin-bottom: 25px;
 }
-
-
-/* ANIMATIONS */
 
 @keyframes wishlistFadeIn {
 
@@ -1339,7 +1165,6 @@ input {
 
 }
 
-
 @keyframes heartBeat {
 
     0%,
@@ -1353,11 +1178,6 @@ input {
 
 }
 
-
-/* =========================================
-   WISHLIST RESPONSIVE
-========================================= */
-
 @media (max-width: 900px) {
 
     .wishlist-grid {
@@ -1366,19 +1186,16 @@ input {
 
 }
 
-
 @media (max-width: 600px) {
 
     .wishlist-section {
         padding: 45px 0;
     }
 
-
     .wishlist-card {
         flex-direction: column;
         padding: 18px;
     }
-
 
     .wishlist-image {
         width: 100%;
@@ -1388,41 +1205,32 @@ input {
         font-size: 90px;
     }
 
-
     .wishlist-info h2 {
         font-size: 22px;
     }
-
 
     .wishlist-status {
         align-items: flex-start;
         flex-direction: column;
     }
 
-
     .status-select {
         width: 100%;
     }
-
 
     .wishlist-buttons {
         flex-direction: column;
     }
 
-
     .wishlist-buttons .btn {
         width: 100%;
     }
-
 
     .empty-wishlist {
         padding: 45px 20px;
     }
 
 }
-/* =========================================
-   FAQ ACCORDION
-========================================= */
 
 .faq-section {
     padding: 70px 0;
@@ -1451,9 +1259,6 @@ input {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 }
 
-
-/* QUESTION BUTTON */
-
 .faq-question {
     width: 100%;
     padding: 20px 25px;
@@ -1477,18 +1282,12 @@ input {
     color: #ff6268;
 }
 
-
-/* PLUS ICON */
-
 .faq-icon {
     font-size: 25px;
     font-weight: 600;
 
     transition: transform 0.3s ease;
 }
-
-
-/* ANSWER — HIDDEN BY DEFAULT */
 
 .faq-answer {
     max-height: 0;
@@ -1504,9 +1303,6 @@ input {
         opacity 0.25s ease;
 }
 
-
-/* ANSWER — SHOW WHEN ACTIVE */
-
 .faq-item.active .faq-answer {
     max-height: 200px;
 
@@ -1515,24 +1311,13 @@ input {
     opacity: 1;
 }
 
-
-/* ROTATE PLUS */
-
 .faq-item.active .faq-icon {
     transform: rotate(45deg);
 }
-/* =========================================
-   FEEDBACK & SUPPORT PAGE
-========================================= */
 
 .feedback-section {
     padding: 70px 0;
 }
-
-
-/* =========================================
-   FEEDBACK LAYOUT
-========================================= */
 
 .feedback-layout {
     display: grid;
@@ -1540,11 +1325,6 @@ input {
     gap: 35px;
     align-items: start;
 }
-
-
-/* =========================================
-   FEEDBACK FORM CARD
-========================================= */
 
 .feedback-form-card,
 .support-card {
@@ -1556,28 +1336,20 @@ input {
         0 10px 30px rgba(0, 0, 0, 0.07);
 }
 
-
 .feedback-form-card h2,
 .support-card h2 {
     margin-bottom: 8px;
     font-size: 30px;
 }
 
-
 .feedback-intro {
     color: #666;
     margin-bottom: 30px;
 }
 
-
-/* =========================================
-   FORM ELEMENTS
-========================================= */
-
 .form-group {
     margin-bottom: 22px;
 }
-
 
 .form-group label {
     display: block;
@@ -1585,7 +1357,6 @@ input {
 
     font-weight: 600;
 }
-
 
 .form-group input,
 .form-group textarea,
@@ -1609,7 +1380,6 @@ input {
         box-shadow 0.3s ease;
 }
 
-
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
@@ -1619,16 +1389,10 @@ input {
         0 0 0 3px rgba(255, 98, 104, 0.12);
 }
 
-
 .form-group textarea {
     resize: vertical;
     min-height: 140px;
 }
-
-
-/* =========================================
-   FORM ERRORS
-========================================= */
 
 .form-error {
     display: block;
@@ -1641,24 +1405,13 @@ input {
     font-weight: 600;
 }
 
-
-/* =========================================
-   SUBMIT BUTTON
-========================================= */
-
 .feedback-form-card .btn {
     margin-top: 5px;
 }
 
-
-/* =========================================
-   SUPPORT CARD
-========================================= */
-
 .support-card {
     text-align: center;
 }
-
 
 .support-icon {
     width: 85px;
@@ -1698,7 +1451,6 @@ input {
     line-height: 1.6;
 }
 
-
 .support-contact {
     margin-top: 25px;
 
@@ -1707,16 +1459,10 @@ input {
     border-top: 2px solid #f7e6df;
 }
 
-
 .support-contact p {
     margin: 12px 0;
     font-size: 15px;
 }
-
-
-/* =========================================
-   FEEDBACK SUCCESS
-========================================= */
 
 .feedback-success {
     display: none;
@@ -1726,13 +1472,11 @@ input {
     padding: 35px 10px;
 }
 
-
 .feedback-success.show {
     display: block;
 
     animation: feedbackSuccess 0.5s ease;
 }
-
 
 .feedback-success .success-icon {
     width: 70px;
@@ -1753,17 +1497,14 @@ input {
     font-weight: 700;
 }
 
-
 .feedback-success h3 {
     font-size: 28px;
     margin-bottom: 8px;
 }
 
-
 .feedback-success p {
     color: #666;
 }
-
 
 @keyframes feedbackSuccess {
 
@@ -1779,33 +1520,24 @@ input {
 
 }
 
-
-/* =========================================
-   FAQ
-========================================= */
-
 .faq-section {
     padding: 20px 0 70px;
 }
-
 
 .faq-heading {
     text-align: center;
     margin-bottom: 35px;
 }
 
-
 .faq-heading h2 {
     font-size: 36px;
     margin-top: 5px;
 }
 
-
 .faq-list {
     max-width: 850px;
     margin: 0 auto;
 }
-
 
 .faq-item {
     background: #ffffff;
@@ -1819,7 +1551,6 @@ input {
     box-shadow:
         0 5px 20px rgba(0, 0, 0, 0.06);
 }
-
 
 .faq-question {
     width: 100%;
@@ -1845,11 +1576,9 @@ input {
     transition: color 0.3s ease;
 }
 
-
 .faq-question:hover {
     color: #ff6268;
 }
-
 
 .faq-icon {
     font-size: 25px;
@@ -1857,7 +1586,6 @@ input {
 
     transition: transform 0.3s ease;
 }
-
 
 .faq-answer {
     max-height: 0;
@@ -1874,7 +1602,6 @@ input {
         opacity 0.25s ease;
 }
 
-
 .faq-item.active .faq-answer {
     max-height: 200px;
 
@@ -1883,15 +1610,9 @@ input {
     opacity: 1;
 }
 
-
 .faq-item.active .faq-icon {
     transform: rotate(45deg);
 }
-
-
-/* =========================================
-   FEEDBACK RESPONSIVE
-========================================= */
 
 @media (max-width: 900px) {
 
@@ -1901,13 +1622,11 @@ input {
 
 }
 
-
 @media (max-width: 600px) {
 
     .feedback-section {
         padding: 45px 0;
     }
-
 
     .feedback-form-card,
     .support-card {
@@ -1915,29 +1634,24 @@ input {
         border-radius: 20px;
     }
 
-
     .feedback-form-card h2,
     .support-card h2 {
         font-size: 25px;
     }
 
-
     .faq-heading h2 {
         font-size: 30px;
     }
-
 
     .faq-question {
         padding: 17px 18px;
         font-size: 16px;
     }
 
-
     .faq-answer {
         padding-left: 18px;
         padding-right: 18px;
     }
-
 
     .faq-item.active .faq-answer {
         padding-left: 18px;
@@ -1946,17 +1660,11 @@ input {
     }
 
 }
-/* =========================================
-   SHOPPING CART PAGE
-========================================= */
 
 .cart-section {
     padding: 70px 0;
     min-height: 500px;
 }
-
-
-/* CART LAYOUT */
 
 .cart-layout {
     display: grid;
@@ -1965,17 +1673,11 @@ input {
     align-items: start;
 }
 
-
-/* CART ITEMS */
-
 .cart-items {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
-
-/* INDIVIDUAL CART ITEM */
 
 .cart-item {
     display: grid;
@@ -1994,9 +1696,6 @@ input {
     animation: cartItemFade 0.4s ease;
 }
 
-
-/* CART IMAGE */
-
 .cart-item-image {
     width: 110px;
     height: 110px;
@@ -2012,15 +1711,11 @@ input {
     font-size: 55px;
 }
 
-
-/* CART DETAILS */
-
 .cart-item-details h2 {
     margin: 6px 0;
 
     font-size: 21px;
 }
-
 
 .cart-item-price {
     margin: 0;
@@ -2029,15 +1724,11 @@ input {
     font-size: 14px;
 }
 
-
-/* QUANTITY */
-
 .quantity-controls {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 
 .quantity-btn {
     width: 36px;
@@ -2059,14 +1750,12 @@ input {
         transform 0.2s ease;
 }
 
-
 .quantity-btn:hover {
     background: #ff6268;
     color: #ffffff;
 
     transform: scale(1.08);
 }
-
 
 .quantity {
     min-width: 25px;
@@ -2077,13 +1766,9 @@ input {
     font-weight: 700;
 }
 
-
-/* SUBTOTAL */
-
 .cart-item-subtotal {
     text-align: right;
 }
-
 
 .cart-item-subtotal span {
     display: block;
@@ -2094,13 +1779,10 @@ input {
     margin-bottom: 4px;
 }
 
-
 .cart-item-subtotal strong {
     color: #B94A3A;
     font-size: 18px;
 }
-
-/* REMOVE BUTTON */
 
 .remove-item {
     border: none;
@@ -2116,16 +1798,10 @@ input {
     transition: color 0.2s ease;
 }
 
-
 .remove-item:hover {
     color: #b92d20;
     text-decoration: underline;
 }
-
-
-/* =========================================
-   CART SUMMARY
-========================================= */
 
 .cart-summary {
     background: #ffffff;
@@ -2141,13 +1817,11 @@ input {
     top: 100px;
 }
 
-
 .cart-summary h2 {
     margin-bottom: 25px;
 
     font-size: 28px;
 }
-
 
 .summary-row {
     display: flex;
@@ -2157,16 +1831,13 @@ input {
     margin-bottom: 15px;
 }
 
-
 .summary-row span {
     color: #666;
 }
 
-
 .summary-row strong {
     font-size: 17px;
 }
-
 
 .summary-total {
     padding-top: 18px;
@@ -2176,13 +1847,11 @@ input {
     border-top: 2px solid #f5e4dc;
 }
 
-
 .summary-total span,
 .summary-total strong {
     color: #ff6268;
     font-size: 22px;
 }
-
 
 .cart-summary-buttons {
     display: flex;
@@ -2193,13 +1862,9 @@ input {
     margin-top: 25px;
 }
 
-
 .cart-summary-buttons .btn {
     width: 100%;
 }
-
-
-/* CLEAR CART */
 
 .btn-danger {
     background: #fff0f0;
@@ -2208,14 +1873,10 @@ input {
     border: none;
 }
 
-
 .btn-danger:hover {
     background: #B94A3A;
     color: #ffffff;
 }
-
-
-/* EMPTY CART */
 
 .empty-cart {
     text-align: center;
@@ -2234,13 +1895,11 @@ input {
     margin: 20px auto;
 }
 
-
 .empty-cart-icon {
     font-size: 70px;
 
     margin-bottom: 15px;
 }
-
 
 .empty-cart h2 {
     font-size: 30px;
@@ -2248,15 +1907,11 @@ input {
     margin-bottom: 10px;
 }
 
-
 .empty-cart p {
     color: #666;
 
     margin-bottom: 25px;
 }
-
-
-/* ANIMATION */
 
 @keyframes cartItemFade {
 
@@ -2272,17 +1927,11 @@ input {
 
 }
 
-
-/* =========================================
-   CART RESPONSIVE
-========================================= */
-
 @media (max-width: 900px) {
 
     .cart-layout {
         grid-template-columns: 1fr;
     }
-
 
     .cart-summary {
         position: static;
@@ -2290,19 +1939,16 @@ input {
 
 }
 
-
 @media (max-width: 650px) {
 
     .cart-section {
         padding: 45px 0;
     }
 
-
     .cart-item {
         grid-template-columns: 80px 1fr;
         gap: 15px;
     }
-
 
     .cart-item-image {
         width: 80px;
@@ -2311,50 +1957,38 @@ input {
         font-size: 42px;
     }
 
-
     .cart-item-details h2 {
         font-size: 18px;
     }
 
-
     .quantity-controls {
         grid-column: 1 / 2;
     }
-
 
     .cart-item-subtotal {
         grid-column: 2 / 3;
         text-align: left;
     }
 
-
     .remove-item {
         grid-column: 2 / 3;
         justify-self: start;
     }
 
-
     .cart-summary {
         padding: 25px 20px;
     }
-
 
     .empty-cart {
         padding: 45px 20px;
     }
 
 }
-/* =========================================
-   CHECKOUT PAGE
-========================================= */
 
 .checkout-section {
     padding: 70px 0;
     min-height: 600px;
 }
-
-
-/* CHECKOUT LAYOUT */
 
 .checkout-layout {
     display: grid;
@@ -2362,11 +1996,6 @@ input {
     gap: 35px;
     align-items: start;
 }
-
-
-/* =========================================
-   CHECKOUT FORM
-========================================= */
 
 .checkout-form-card,
 .order-summary-card {
@@ -2378,28 +2007,20 @@ input {
         0 10px 30px rgba(0, 0, 0, 0.07);
 }
 
-
 .checkout-form-card h2,
 .order-summary-card h2 {
     font-size: 30px;
     margin-bottom: 8px;
 }
 
-
 .checkout-intro {
     color: #666;
     margin-bottom: 30px;
 }
 
-
-/* =========================================
-   FORM
-========================================= */
-
 .checkout-form-card .form-group {
     margin-bottom: 22px;
 }
-
 
 .checkout-form-card label {
     display: block;
@@ -2407,7 +2028,6 @@ input {
 
     font-weight: 600;
 }
-
 
 .checkout-form-card input,
 .checkout-form-card textarea {
@@ -2430,7 +2050,6 @@ input {
         box-shadow 0.3s ease;
 }
 
-
 .checkout-form-card input:focus,
 .checkout-form-card textarea:focus {
     border-color: #ff6268;
@@ -2439,22 +2058,15 @@ input {
         0 0 0 3px rgba(255, 98, 104, 0.12);
 }
 
-
 .checkout-form-card textarea {
     resize: vertical;
 }
-
-
-/* =========================================
-   PAYMENT OPTIONS
-========================================= */
 
 .payment-options {
     display: flex;
     gap: 15px;
     margin-top: 8px;
 }
-
 
 .payment-option {
     flex: 1;
@@ -2477,26 +2089,18 @@ input {
         background 0.2s ease;
 }
 
-
 .payment-option:hover {
     border-color: #ff6268;
 }
-
 
 .payment-option input {
     width: auto !important;
     accent-color: #ff6268;
 }
 
-
 .payment-option span {
     font-weight: 600;
 }
-
-
-/* =========================================
-   CARD DETAILS
-========================================= */
 
 .card-details {
     display: none;
@@ -2515,18 +2119,15 @@ input {
     animation: cardDetailsFade 0.3s ease;
 }
 
-
 .card-details h3 {
     margin-bottom: 18px;
 }
-
 
 .card-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
-
 
 @keyframes cardDetailsFade {
 
@@ -2542,40 +2143,25 @@ input {
 
 }
 
-
-/* =========================================
-   CHECKOUT BUTTON
-========================================= */
-
 .checkout-submit {
     width: 100%;
     margin-top: 5px;
 }
-
-
-/* =========================================
-   ORDER SUMMARY
-========================================= */
 
 .order-summary-card {
     position: sticky;
     top: 100px;
 }
 
-
 .order-summary-card h2 {
     margin-bottom: 25px;
 }
-
-
-/* INDIVIDUAL CHECKOUT ITEM */
 
 .checkout-items {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
-
 
 .checkout-item {
     display: grid;
@@ -2586,7 +2172,6 @@ input {
 
     align-items: center;
 }
-
 
 .checkout-item-image {
     width: 65px;
@@ -2603,13 +2188,11 @@ input {
     font-size: 32px;
 }
 
-
 .checkout-item-info h3 {
     margin: 0 0 3px;
 
     font-size: 16px;
 }
-
 
 .checkout-item-info p {
     margin: 0 0 3px;
@@ -2620,20 +2203,15 @@ input {
     font-weight: 600;
 }
 
-
 .checkout-item-info span {
     color: #777;
     font-size: 13px;
 }
 
-
 .checkout-item > strong {
     font-size: 14px;
     white-space: nowrap;
 }
-
-
-/* DIVIDER */
 
 .summary-divider {
     height: 1px;
@@ -2642,9 +2220,6 @@ input {
 
     margin: 25px 0;
 }
-
-
-/* SUMMARY ROWS */
 
 .order-summary-card .summary-row {
     display: flex;
@@ -2655,16 +2230,13 @@ input {
     margin-bottom: 15px;
 }
 
-
 .order-summary-card .summary-row span {
     color: #666;
 }
 
-
 .order-summary-card .summary-row strong {
     font-size: 17px;
 }
-
 
 .order-summary-card .summary-total {
     padding-top: 18px;
@@ -2674,16 +2246,12 @@ input {
     border-top: 2px solid #f5e4dc;
 }
 
-
 .order-summary-card .summary-total span,
 .order-summary-card .summary-total strong {
     color: #B94A3A;
 
     font-size: 23px;
 }
-
-
-/* EMPTY CHECKOUT */
 
 .empty-checkout {
     padding: 25px 0;
@@ -2692,11 +2260,6 @@ input {
 
     color: #666;
 }
-
-
-/* =========================================
-   SUCCESS OVERLAY
-========================================= */
 
 .success-overlay {
     position: fixed;
@@ -2717,13 +2280,11 @@ input {
     backdrop-filter: blur(4px);
 }
 
-
 .success-overlay.show {
     display: flex;
 
     animation: overlayFade 0.3s ease;
 }
-
 
 .success-box {
     width: 100%;
@@ -2742,7 +2303,6 @@ input {
 
     animation: successPop 0.4s ease;
 }
-
 
 .success-icon {
     width: 80px;
@@ -2763,24 +2323,20 @@ input {
     font-weight: 700;
 }
 
-
 .success-box h2 {
     margin-bottom: 10px;
 
     font-size: 30px;
 }
 
-
 .success-box p {
     color: #666;
     margin-bottom: 8px;
 }
 
-
 .success-box .btn {
     margin-top: 20px;
 }
-
 
 @keyframes overlayFade {
 
@@ -2793,7 +2349,6 @@ input {
     }
 
 }
-
 
 @keyframes successPop {
 
@@ -2809,17 +2364,11 @@ input {
 
 }
 
-
-/* =========================================
-   CHECKOUT RESPONSIVE
-========================================= */
-
 @media (max-width: 900px) {
 
     .checkout-layout {
         grid-template-columns: 1fr;
     }
-
 
     .order-summary-card {
         position: static;
@@ -2828,13 +2377,11 @@ input {
 
 }
 
-
 @media (max-width: 600px) {
 
     .checkout-section {
         padding: 45px 0;
     }
-
 
     .checkout-form-card,
     .order-summary-card {
@@ -2843,27 +2390,22 @@ input {
         border-radius: 20px;
     }
 
-
     .checkout-form-card h2,
     .order-summary-card h2 {
         font-size: 25px;
     }
 
-
     .payment-options {
         flex-direction: column;
     }
-
 
     .card-row {
         grid-template-columns: 1fr;
     }
 
-
     .checkout-item {
         grid-template-columns: 55px 1fr;
     }
-
 
     .checkout-item-image {
         width: 55px;
@@ -2872,18 +2414,16 @@ input {
         font-size: 27px;
     }
 
-
     .checkout-item > strong {
         grid-column: 2;
     }
-
 
     .success-box {
         padding: 35px 22px;
     }
 
 }
-/* Product image sizing */
+
 .shop-product-image {
     width: 100%;
     height: 280px;
@@ -2900,9 +2440,6 @@ input {
     object-fit: contain;
     display: block;
 }
-/* =========================================
-   WISHLIST PRODUCT IMAGES
-========================================= */
 
 .wishlist-image {
     width: 240px;
@@ -2922,9 +2459,6 @@ input {
     object-fit: contain;
     display: block;
 }
-/* =========================================
-   CART PRODUCT IMAGES
-========================================= */
 
 .cart-item-image {
     width: 180px;
@@ -2957,9 +2491,6 @@ input {
     }
 
 }
-/* =========================================
-   CART MOBILE LAYOUT
-========================================= */
 
 @media (max-width: 768px) {
 
@@ -3014,9 +2545,6 @@ input {
         width: 100%;
     }
 }
-/* =========================================
-   FIX CART ITEM LAYOUT
-========================================= */
 
 .cart-item {
     display: grid;
@@ -3131,7 +2659,7 @@ input {
         align-self: center;
     }
 }
-/* Checkout item images */
+
 .checkout-item-image {
     width: 90px;
     height: 90px;
@@ -3151,7 +2679,6 @@ input {
     display: block;
 }
 
-/* Mobile checkout */
 @media (max-width: 768px) {
 
     .checkout-item-image {
@@ -3160,7 +2687,7 @@ input {
     }
 
 }
-/* Checkout order item layout */
+
 .checkout-item {
     display: grid;
     grid-template-columns: 80px 1fr auto;
@@ -3207,8 +2734,6 @@ input {
     font-size: 0.95rem;
 }
 
-
-/* Mobile checkout */
 @media (max-width: 768px) {
 
     .checkout-item {
@@ -3223,7 +2748,7 @@ input {
         margin-top: -5px;
     }
 
-}/* Product modal image */
+}
 .modal-image {
     width: 100%;
     height: 300px;
