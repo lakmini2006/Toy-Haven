@@ -14,7 +14,7 @@ const products = [
         name: "Super Hero Figure",
         category: "Figurines",
         price: 4500,
-        image: "images/superhero.png",
+        image: "images/webp/superhero.webp",
         description: "A colourful collectible superhero figure for fans and collectors."
     },
 
@@ -23,7 +23,7 @@ const products = [
         name: "Cute Teddy Bear",
         category: "Toys",
         price: 3500,
-        image: "images/teddy-bear.png",
+        image: "images/webp/teddy-bear.webp",
         description: "A soft and adorable teddy bear that makes a perfect gift."
     },
 
@@ -32,7 +32,7 @@ const products = [
         name: "Classic Chess Set",
         category: "Board Games",
         price: 5500,
-        image: "images/chess.png",
+        image: "images/webp/chess.webp",
         description: "A classic chess set for strategic games with friends and family."
     },
 
@@ -41,7 +41,7 @@ const products = [
         name: "Classic Mustang",
         category: "Diecast Cars",
         price: 6800,
-        image: "images/mustang.png",
+        image: "images/webp/mustang.webp",
         description: "A beautifully detailed miniature classic Mustang for collectors."
     },
 
@@ -50,7 +50,7 @@ const products = [
         name: "Robot Action Figure",
         category: "Figurines",
         price: 4200,
-        image: "images/robot.png",
+        image: "images/webp/robot.webp",
         description: "A futuristic robot figure for imaginative play and collecting."
     },
 
@@ -59,7 +59,7 @@ const products = [
         name: "Building Blocks Set",
         category: "Toys",
         price: 4800,
-        image: "images/building-blocks.png",
+        image: "images/webp/building-blocks.webp",
         description: "A creative building block set for hours of construction fun."
     },
 
@@ -68,7 +68,7 @@ const products = [
         name: "Monopoly Classic",
         category: "Board Games",
         price: 7500,
-        image: "images/monopoly.png",
+        image: "images/webp/monopoly.webp",
         description: "A classic property trading board game for family game nights."
     },
 
@@ -77,7 +77,7 @@ const products = [
         name: "Red Sports Car",
         category: "Diecast Cars",
         price: 5200,
-        image: "images/sports-car.png",
+        image: "images/webp/sports-car.webp",
         description: "A stylish miniature sports car for diecast collectors."
     },
 
@@ -86,7 +86,7 @@ const products = [
         name: "Fantasy Warrior",
         category: "Figurines",
         price: 6000,
-        image: "images/fantasy-warrior.png",
+        image: "images/webp/fantasy-warrior.webp",
         description: "A fantasy warrior collectible figure with detailed design."
     },
 
@@ -95,7 +95,7 @@ const products = [
         name: "Toy Train Set",
         category: "Toys",
         price: 6200,
-        image: "images/toy-train.png",
+        image: "images/webp/toy-train.webp",
         description: "An exciting toy train set designed for creative play."
     },
 
@@ -104,7 +104,7 @@ const products = [
         name: "Snakes and Ladders",
         category: "Board Games",
         price: 2800,
-        image: "images/snakes-ladders.png",
+        image: "images/webp/snakes-ladders.webp",
         description: "A fun and simple board game suitable for family entertainment."
     },
 
@@ -113,7 +113,7 @@ const products = [
         name: "Vintage Pickup Truck",
         category: "Diecast Cars",
         price: 5900,
-        image: "images/pickup-truck.png",
+        image: "images/webp/pickup-truck.webp",
         description: "A detailed vintage pickup truck miniature for collectors."
     }
 
@@ -205,7 +205,7 @@ function displayProducts(productList) {
 
                     <button class="btn btn-secondary add-to-wishlist"
                             data-id="${product.id}">
-                        <img src="images/why-icon-heart.png" alt="">
+                        <img src="images/webp/why-icon-heart.webp" alt="">
                         Wishlist
                     </button>
 
