@@ -365,10 +365,13 @@ if (checkoutForm) {
 
 
                 if (expiry === "") {
-
                     alert(
-                        "Please enter the card expiry date."
+                    "Please enter the card expiry date."
                     );
+
+                    isValid = false;
+                } else if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiry)) {
+                    alert("Expiry date must be in MM/YY format.");
 
                     isValid = false;
                 }
