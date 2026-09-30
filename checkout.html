@@ -8,18 +8,23 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title>Checkout | Toy Haven</title>
+    <title>Toy Haven | Shopping Cart</title>
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
+    <meta name="description"
+        content="View and manage your Toy Haven shopping cart.">
+
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com"
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
         crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
 </head>
@@ -83,317 +88,165 @@
     </header>
 
 
-    <section class="page-header">
+    <main>
 
-        <div class="container">
+        <section class="page-header">
 
-            <p class="eyebrow">
-                Almost there!
-            </p>
+            <div class="section-heading">
 
-            <h1>
-                Checkout
-            </h1>
-
-            <p>
-                Complete your details and place your order.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <main class="checkout-section">
-
-        <div class="container checkout-layout">
-
-
-            <section class="checkout-form-card">
-
-                <h2>
-                    Customer Details
-                </h2>
-
-                <p class="checkout-intro">
-                    Please enter your information below.
+                <p class="section-subtitle">
+                    YOUR SHOPPING BAG
                 </p>
 
-                <form id="checkout-form" novalidate>
+                <h1>
+                    Shopping Cart
+                </h1>
 
-                    <div class="form-group">
+                <p>
+                    Review your selected products before checkout.
+                </p>
 
-                        <label for="full-name">
-                            Full Name
-                        </label>
+            </div>
 
-                        <input
-                            type="text"
-                            id="full-name"
-                            name="fullName"
-                            placeholder="Enter your full name"
-                            required>
-
-                        <small
-                            class="form-error"
-                            id="full-name-error">
-                        </small>
-
-                    </div>
+        </section>
 
 
-                    <div class="form-group">
+        <section class="cart-section">
 
-                        <label for="email">
-                            Email Address
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="example@email.com"
-                            required>
-
-                        <small
-                            class="form-error"
-                            id="email-error">
-                        </small>
-
-                    </div>
+            <div class="cart-layout"
+                style="width: 90%; max-width: 1400px; margin: 0 auto;">
 
 
-                    <div class="form-group">
+                <div class="cart-items-container">
 
-                        <label for="address">
-                            Delivery Address
-                        </label>
-
-                        <textarea
-                            id="address"
-                            name="address"
-                            rows="4"
-                            placeholder="Enter your delivery address"
-                            required></textarea>
-
-                        <small
-                            class="form-error"
-                            id="address-error">
-                        </small>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Payment Method
-                        </label>
-
-                        <div class="payment-options">
-
-                            <label class="payment-option">
-
-                                <input
-                                    type="radio"
-                                    name="payment"
-                                    value="card"
-                                    required>
-
-                                <span>
-                                    Card
-                                </span>
-
-                            </label>
-
-
-                            <label class="payment-option">
-
-                                <input
-                                    type="radio"
-                                    name="payment"
-                                    value="cod">
-
-                                <span>
-                                    Cash on Delivery
-                                </span>
-
-                            </label>
-
-                        </div>
-
-                        <small
-                            class="form-error"
-                            id="payment-error">
-                        </small>
-
+                    <div
+                        id="cart-items"
+                        class="cart-items">
                     </div>
 
 
                     <div
-                        class="card-details"
-                        id="card-details">
+                        id="empty-cart"
+                        class="empty-cart">
 
-                        <h3>
-                            Card Details
-                        </h3>
-
-                        <div class="form-group">
-
-                            <label for="card-number">
-                                Card Number
-                            </label>
-
-                            <input
-                                type="text"
-                                id="card-number"
-                                placeholder="1234 5678 9012 3456"
-                                maxlength="19">
-
+                        <div class="empty-cart-icon">
+                            <img
+                                src="images/webp/why-icon-shopping.webp"
+                                alt="Shopping cart">
                         </div>
 
+                        <h2>
+                            Your cart is empty
+                        </h2>
 
-                        <div class="card-row">
+                        <p>
+                            Looks like you haven't added
+                            any toys yet.
+                        </p>
 
-                            <div class="form-group">
+                        <a
+                            href="products.html"
+                            class="btn btn-primary">
 
-                                <label for="expiry">
-                                    Expiry Date
-                                </label>
+                            Start Shopping
 
-                                <input
-                                    type="text"
-                                    id="expiry"
-                                    placeholder="MM/YY"
-                                    maxlength="5">
+                        </a>
 
-                            </div>
+                    </div>
+
+                </div>
 
 
-                            <div class="form-group">
+                <aside class="cart-summary">
 
-                                <label for="cvv">
-                                    CVV
-                                </label>
+                    <h2>
+                        Cart Summary
+                    </h2>
 
-                                <input
-                                    type="password"
-                                    id="cvv"
-                                    placeholder="123"
-                                    maxlength="3">
 
-                            </div>
+                    <div class="summary-row">
 
-                        </div>
+                        <span>
+                            Items
+                        </span>
+
+                        <span id="summary-items">
+                            0
+                        </span>
 
                     </div>
 
 
-                    <button
-                        type="submit"
-                        class="btn btn-primary checkout-submit">
+                    <div class="summary-row">
 
-                        Place Order
+                        <span>
+                            Subtotal
+                        </span>
 
-                    </button>
+                        <span id="cart-subtotal">
+                            Rs. 0
+                        </span>
 
-                </form>
-
-            </section>
-
-
-            <aside class="order-summary-card">
-
-                <h2>
-                    Order Summary
-                </h2>
-
-                <div id="checkout-items"
-                    class="checkout-items">
-                </div>
+                    </div>
 
 
-                <div class="summary-divider"></div>
+                    <div class="summary-row">
+
+                        <span>
+                            Delivery
+                        </span>
+
+                        <span>
+                            Free
+                        </span>
+
+                    </div>
 
 
-                <div class="summary-row">
+                    <div class="summary-total">
 
-                    <span>
-                        Items
-                    </span>
+                        <span>
+                            Total
+                        </span>
 
-                    <strong id="checkout-item-count">
-                        0
-                    </strong>
+                        <span id="cart-total">
+                            Rs. 0
+                        </span>
 
-                </div>
-
-
-                <div class="summary-row">
-
-                    <span>
-                        Subtotal
-                    </span>
-
-                    <strong id="checkout-subtotal">
-                        Rs. 0
-                    </strong>
-
-                </div>
+                    </div>
 
 
-                <div class="summary-row summary-total">
+                    <div style="display: flex; gap: 10px; align-items: center;">
 
-                    <span>
-                        Total
-                    </span>
+                        <button
+                            id="clear-cart"
+                            class="btn btn-danger"
+                            style="flex: 1;">
 
-                    <strong id="checkout-total">
-                        Rs. 0
-                    </strong>
+                            Clear Cart
 
-                </div>
-
-            </aside>
-
-        </div>
-
-    </main>
+                        </button>
 
 
-    <div
-        class="success-overlay"
-        id="success-overlay">
+                        <a
+                            href="checkout.html"
+                            id="checkout-button"
+                            class="btn btn-primary"
+                            style="flex: 1; text-align: center;">
 
-        <div class="success-box">
+                            Proceed to Checkout
 
-            <div class="success-icon">
-                &#10003;
+                        </a>
+
+                    </div>
+
+                </aside>
+
             </div>
 
-            <h2>
-                Order Successful!
-            </h2>
+        </section>
 
-            <p>
-                Thank you for shopping with Toy Haven.
-            </p>
-
-            <p>
-                Your order has been placed successfully.
-            </p>
-
-            <button
-                class="btn btn-primary"
-                id="continue-shopping">
-
-                Continue Shopping
-
-            </button>
-
-        </div>
-
-    </div>
+    </main>
 
 
     <footer class="footer">
@@ -474,7 +327,9 @@
 
 
     <script src="js/main.js"></script>
-    <script src="js/checkout.js"></script>
+
+    <script src="js/cart.js"></script>
+
 
 </body>
 

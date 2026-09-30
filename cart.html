@@ -113,7 +113,8 @@
 
         <section class="cart-section">
 
-            <div class="cart-layout">
+            <div class="cart-layout"
+                style="width: 90%; max-width: 1400px; margin: 0 auto;">
 
 
                 <div class="cart-items-container">
@@ -215,23 +216,29 @@
                     </div>
 
 
-                    <button
-                        id="clear-cart"
-                        class="btn btn-danger">
+                    <div style="display: flex; gap: 10px; align-items: center;">
 
-                        Clear Cart
+                        <button
+                            id="clear-cart"
+                            class="btn btn-danger"
+                            style="flex: 1;">
 
-                    </button>
+                            Clear Cart
+
+                        </button>
 
 
-                    <a
-                        href="checkout.html"
-                        id="checkout-button"
-                        class="btn btn-primary">
+                        <a
+                            href="checkout.html"
+                            id="checkout-button"
+                            class="btn btn-primary"
+                            style="flex: 1; text-align: center;">
 
-                        Proceed to Checkout
+                            Proceed to Checkout
 
-                    </a>
+                        </a>
+
+                    </div>
 
                 </aside>
 
