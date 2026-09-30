@@ -19,7 +19,7 @@
         crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
 </head>
@@ -27,48 +27,56 @@
 
 <body>
 
-    <header class="site-header">
+    <header class="header">
 
         <nav class="navbar">
 
-            <a href="index.html" class="logo">
+            <a href="index.html"
+                class="logo">
+
                 <img src="images/webp/toy-haven-logo.webp" alt="Toy Haven">
+
             </a>
 
-            <button class="hamburger"
+
+            <div class="nav-links"
+                id="navLinks">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+                <a href="cart.html"
+                    class="active">
+
+                    Cart
+                    <span id="cart-count">0</span>
+
+                </a>
+
+                <a href="feedback.html">
+                    Support
+                </a>
+
+            </div>
+
+
+            <button
+                class="hamburger"
                 id="hamburger"
                 aria-label="Open navigation menu">
 
                 &#9776;
 
             </button>
-
-            <ul class="nav-links" id="navLinks">
-
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="products.html">Products</a>
-                </li>
-
-                <li>
-                    <a href="wishlist.html">Wishlist</a>
-                </li>
-
-                <li>
-                    <a href="cart.html">
-                        Cart
-                        <span id="cart-count">0</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="feedback.html">Feedback</a>
-                </li>
-
-            </ul>
 
         </nav>
 
@@ -388,65 +396,77 @@
     </div>
 
 
-    <footer class="site-footer">
+    <footer class="footer">
 
-        <div class="container">
-
-            <div class="footer-content">
-
-                <div class="footer-brand">
-
-                    <h2>
-                        <img
-                            src="images/webp/toy-haven-logo.webp"
-                            alt="Toy Haven">
-                    </h2>
-
-                    <p>
-                        Bringing smiles, one toy at a time.
-                    </p>
-
-                </div>
+        <div class="footer-container">
 
 
-                <div class="footer-links">
+            <div class="footer-column">
 
-                    <h3>
-                        Quick Links
-                    </h3>
-
-                    <a href="index.html">
-                        Home
-                    </a>
-
-                    <a href="products.html">
-                        Products
-                    </a>
-
-                    <a href="wishlist.html">
-                        Wishlist
-                    </a>
-
-                    <a href="cart.html">
-                        Cart
-                    </a>
-
-                    <a href="feedback.html">
-                        Feedback
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="footer-bottom">
+                <h3>
+                    <img
+                        src="images/webp/toy-haven-logo.webp"
+                        alt="Toy Haven">
+                </h3>
 
                 <p>
-                    &copy; 2026 Toy Haven. All rights reserved.
+                    Your interactive destination for
+                    toys, games and collectibles.
                 </p>
 
             </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Support
+                </h3>
+
+                <a href="feedback.html">
+                    Feedback & Support
+                </a>
+
+                <a href="checkout.html">
+                    Checkout
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Toy Haven.
+                All rights reserved.
+            </p>
 
         </div>
 

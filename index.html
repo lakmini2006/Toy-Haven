@@ -313,6 +313,136 @@
 
         <section class="product-of-day">
 
+            <style>
+                .product-of-day {
+                    position: relative;
+                    overflow: hidden;
+                    padding: 85px 24px;
+                    background:
+                        radial-gradient(circle at 8% 20%, rgba(255, 209, 92, 0.24) 0, rgba(255, 209, 92, 0) 28%),
+                        radial-gradient(circle at 92% 80%, rgba(190, 70, 53, 0.12) 0, rgba(190, 70, 53, 0) 30%),
+                        #fff8ec;
+                }
+
+                .product-of-day .product-day-content {
+                    position: relative;
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    padding: 58px 55px 62px;
+                    text-align: center;
+                    background: rgba(255, 255, 255, 0.94);
+                    border: 1px solid rgba(190, 70, 53, 0.12);
+                    border-radius: 30px;
+                    box-shadow: 0 18px 45px rgba(70, 43, 30, 0.10);
+                    overflow: hidden;
+                }
+
+                .product-of-day .product-day-content::before {
+                    content: "";
+                    position: absolute;
+                    width: 210px;
+                    height: 210px;
+                    top: -115px;
+                    left: -80px;
+                    border-radius: 50%;
+                    background: rgba(255, 204, 70, 0.18);
+                }
+
+                .product-of-day .product-day-content::after {
+                    content: "✦";
+                    position: absolute;
+                    right: 45px;
+                    bottom: 12px;
+                    font-size: 95px;
+                    line-height: 1;
+                    color: rgba(190, 70, 53, 0.07);
+                }
+
+                .product-of-day .product-day-content > * {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .product-of-day .section-subtitle {
+                    margin: 0 0 16px;
+                    color: #bd4938;
+                    font-size: 14px;
+                    font-weight: 800;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                }
+
+                .product-of-day h2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 18px;
+                    margin: 0;
+                    color: #35231c;
+                    font-size: clamp(36px, 5vw, 58px);
+                    font-weight: 800;
+                    line-height: 1.1;
+                }
+
+                .product-of-day h2 img {
+                    width: 42px;
+                    height: 42px;
+                    object-fit: contain;
+                    flex-shrink: 0;
+                }
+
+                .product-of-day #featured-product-description {
+                    max-width: 700px;
+                    margin: 22px auto 30px;
+                    color: #5d5049;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 1.7;
+                }
+
+                .product-of-day .btn.btn-primary {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: 165px;
+                    padding: 14px 28px;
+                    border-radius: 999px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+
+                @media (max-width: 700px) {
+                    .product-of-day {
+                        padding: 55px 16px;
+                    }
+
+                    .product-of-day .product-day-content {
+                        padding: 45px 22px 50px;
+                        border-radius: 24px;
+                    }
+
+                    .product-of-day h2 {
+                        gap: 10px;
+                        font-size: 34px;
+                    }
+
+                    .product-of-day h2 img {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    .product-of-day #featured-product-description {
+                        font-size: 16px;
+                    }
+
+                    .product-of-day .product-day-content::after {
+                        right: 18px;
+                        font-size: 65px;
+                    }
+                }
+            </style>
+
             <div class="product-day-content">
 
                 <p class="section-subtitle">
